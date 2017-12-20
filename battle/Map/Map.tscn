@@ -1,0 +1,110 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://battle/Map/Map.gd" type="Script" id=1]
+[ext_resource path="res://BoardImport.tscn" type="PackedScene" id=2]
+[ext_resource path="res://tilesets/ElevationTiles.tres" type="TileSet" id=3]
+[ext_resource path="res://tilesets/TerrainTiles.tres" type="TileSet" id=4]
+[ext_resource path="res://tilesets/HexMarkers.tres" type="TileSet" id=5]
+[ext_resource path="res://battle/Map/UnitMap.gd" type="Script" id=6]
+[ext_resource path="res://battle/Map/CameraMan.tscn" type="PackedScene" id=7]
+
+[node name="Map" type="Node2D"]
+
+script = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="BoardImport" parent="." instance=ExtResource( 2 )]
+
+[node name="ElevationMap" type="TileMap" parent="."]
+
+mode = 0
+tile_set = ExtResource( 3 )
+cell_size = Vector2( 126, 144 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 1
+cell_tile_origin = 1
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( 0, 6, 65537, 65541, 7, 65537, 65542, 7, 65537, 65543, 7, 65537, 131076, 7, 65537, 131077, 6, 65537, 131078, 6, 65537, 131079, 6, 65537, 131080, 7, 65537, 196612, 7, 65537, 196613, 6, 65537, 196614, 7, 65537, 196615, 6, 65537, 196616, 7, 65537, 262148, 7, 65537, 262149, 7, 65537, 262150, 6, 65537, 262151, 7, 65537, 262152, 7, 65537, 327686, 7, 65537 )
+_sections_unfolded = [ "Cell", "Transform" ]
+
+[node name="TerrainMap" type="TileMap" parent="."]
+
+mode = 0
+tile_set = ExtResource( 4 )
+cell_size = Vector2( 126, 144 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 1
+cell_tile_origin = 1
+cell_y_sort = true
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( 65543, 0, 65537, 131075, 4, 65537, 131076, 0, 65537, 131077, 0, 65537, 131078, 0, 65537, 131079, 2, 65537, 196610, 4, 65537, 196611, 4, 65537, 196612, 4, 65537, 196613, 1, 65537, 196614, 0, 65537, 196615, 1, 65537, 262148, 3, 65537, 262150, 1, 65537 )
+_sections_unfolded = [ "Cell" ]
+
+[node name="UnitMap" type="TileMap" parent="."]
+
+mode = 0
+tile_set = ExtResource( 5 )
+cell_size = Vector2( 126, 144 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 1
+cell_tile_origin = 1
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray(  )
+script = ExtResource( 6 )
+_sections_unfolded = [ "Cell" ]
+
+[node name="CameraMan" parent="." instance=ExtResource( 7 )]
+
+[node name="Hover" type="Line2D" parent="."]
+
+points = PoolVector2Array( 102, 4, 143, 72, 102, 140, 24, 140, -17, 72, 24, 4, 102, 4 )
+width = 2.0
+default_color = Color( 1, 0.339844, 0.339844, 0.501961 )
+texture_mode = 1
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+sharp_limit = 2.0
+round_precision = 8
+_sections_unfolded = [ "Capping" ]
+
+[node name="Select" type="Line2D" parent="."]
+
+points = PoolVector2Array( 104, 1, 146, 72, 104, 143, 22, 143, -20, 72, 22, 1, 104, 1 )
+width = 4.0
+default_color = Color( 0.678711, 1, 0.632813, 0.501961 )
+texture_mode = 1
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+sharp_limit = 2.0
+round_precision = 8
+_sections_unfolded = [ "Capping" ]
+
+

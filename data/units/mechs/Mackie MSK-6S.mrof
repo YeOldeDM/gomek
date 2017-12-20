@@ -1,0 +1,56 @@
+Version:1.0
+
+
+Chassis:Mackie
+Model:MSK-6S
+ 
+Config:Biped 
+TechBase:Inner Sphere 
+Year:2439  
+
+Custom BV:1461
+Custom Cost:9364000
+
+Mass:100 
+Walk MP: 3 
+Engine:Standard 
+Gyro:Standard
+Cockpit:Primitive
+Structure:Standard 
+Myomer:Standard 
+Heat Sinks:15 Single
+Armor:20.0 Primitive
+
+Armor Points:
+LA:24
+RA:24
+LT:20
+RT:20
+CT:31
+HD:9
+LL:28
+RL:28
+RTR:10
+LTR:10
+CTR:10 
+
+
+Equipment:
+0:Weapon:Autocannon/10:RA 
+1:Weapon:PPC:LA 
+2:Weapon:Medium Laser:CT 
+3:Weapon:Medium Laser:CT
+4:Ammo:Autocannon/10:RT
+5:Ammo:Autocannon/10:RT
+
+Critical Slots:
+Left Arm:		Shoulder,	UpperArm,	@1,			@1,			@1,			-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-
+Right Arm:		Shoulder,	UpperArm,	@0,			@0,			@0,			@0,			@0,			@0,			@0,			-Empty-,	-Empty-,	-Empty- 
+Left Torso:		-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-
+Right Torso:	@4,			@5,			-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-
+Center Torso:	Engine,		Engine,		Engine,		Gyro,		Gyro,		Gyro,		Gyro,		Engine,		Engine,		Engine,		@2,			@3
+Head:			LifeSupport,Sensors,	Cockpit,	HeatSink,	Sensors,	LifeSupport
+Left Leg:		Hip,		UpperLeg,	LowerLeg,	Foot,		-Empty-,	-Empty-
+Right Leg:		Hip,		UpperLeg,	LowerLeg,	Foot,		-Empty-,	-Empty-
+
+

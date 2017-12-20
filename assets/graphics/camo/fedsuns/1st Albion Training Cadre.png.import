@@ -1,0 +1,29 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path.s3tc="res://.import/1st Albion Training Cadre.png-caa7a73a12b831889cc9b357a6d15e74.s3tc.stex"
+path.etc2="res://.import/1st Albion Training Cadre.png-caa7a73a12b831889cc9b357a6d15e74.etc2.stex"
+
+[deps]
+
+source_md5="26f0e103e29fed8816957c05ccad071b"
+
+[params]
+
+compress/mode=2
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=true
+flags/filter=true
+flags/mipmaps=true
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=false
+svg/scale=1.0

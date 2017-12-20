@@ -1,0 +1,58 @@
+Version:1.0
+
+
+Chassis:Ymir
+Model:BWP-2E
+ 
+Config:Biped 
+TechBase:Inner Sphere 
+Year:2478 
+
+Custom BV:1393
+Custom Cost:9224500
+
+Mass:90
+Walk MP: 4
+Jump MP: 0
+Engine:Standard 
+Gyro:Standard
+Cockpit:Standard
+Structure:Standard 
+Myomer:Standard 
+Heat Sinks:16 Single
+Armor:11.0 Standard
+
+Armor Points:
+LA:19
+RA:19
+LT:18
+RT:18
+CT:25
+HD:9
+LL:24
+RL:24
+RTR:6
+LTR:6
+CTR:8
+
+
+Equipment:
+0:Weapon:PPC:LA
+1:Weapon:PPC:RA
+2:Weapon:SRM 6:LT
+3:Weapon:LRM 10:RT
+4:Ammo:SRM 6:LT
+5:Ammo:LRM 10:RT
+
+
+Critical Slots:
+Left Arm:		Shoulder,	UpperArm,	LowerArm,	@0,			@0,			@0,			-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-
+Right Arm:		Shoulder,	UpperArm,	LowerArm,	@1,			@1,			@1,			-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-
+Left Torso:		@2,			@2,			@4,			-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-
+Right Torso:	@3,			@3,			@5,			-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-
+Center Torso:	Engine,		Engine,		Engine,		Gyro,		Gyro,		Gyro,		Gyro,		Engine,		Engine,		Engine,		-Empty-,	-Empty-
+Head:			LifeSupport,Sensors,	Cockpit,	-Empty-,	Sensors,	LifeSupport
+Left Leg:		Hip,		UpperLeg,	LowerLeg,	Foot,		HeatSink,	-Empty-
+Right Leg:		Hip,		UpperLeg,	LowerLeg,	Foot,		HeatSink,	-Empty-
+
+

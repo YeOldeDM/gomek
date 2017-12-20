@@ -1,0 +1,3116 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://meklab/Meklab.gd" type="Script" id=1]
+[ext_resource path="res://meklab/Structure.gd" type="Script" id=2]
+[ext_resource path="res://meklab/Equipment.gd" type="Script" id=3]
+[ext_resource path="res://meklab/Assign Criticals.gd" type="Script" id=4]
+[ext_resource path="res://meklab/Info.gd" type="Script" id=5]
+
+[node name="Meklab" type="Control"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+script = ExtResource( 1 )
+
+[node name="Box" type="VBoxContainer" parent="."]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 0
+
+[node name="Split" type="HSplitContainer" parent="Box"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1920.0
+margin_bottom = 1080.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+split_offset = 0
+collapsed = false
+dragger_visibility = 0
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Main" type="TabContainer" parent="Box/Split"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1521.0
+margin_bottom = 1080.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 2.0
+tab_align = 0
+tabs_visible = true
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Structure" type="HBoxContainer" parent="Box/Split/Main"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 0
+script = ExtResource( 2 )
+_sections_unfolded = [ "Margin" ]
+
+[node name="Left" type="PanelContainer" parent="Box/Split/Main/Structure"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 501.0
+margin_bottom = 1044.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Box" type="VBoxContainer" parent="Box/Split/Main/Structure/Left"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 494.0
+margin_bottom = 1037.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 0
+
+[node name="BasicInfo" type="PanelContainer" parent="Box/Split/Main/Structure/Left/Box"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 487.0
+margin_bottom = 513.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 3.0
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Box" type="VBoxContainer" parent="Box/Split/Main/Structure/Left/Box/BasicInfo"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 480.0
+margin_bottom = 506.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 0
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Title" type="Label" parent="Box/Split/Main/Structure/Left/Box/BasicInfo/Box"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 473.0
+margin_bottom = 14.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+text = "Basic Information"
+align = 2
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Data" type="GridContainer" parent="Box/Split/Main/Structure/Left/Box/BasicInfo/Box"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 18.0
+margin_right = 473.0
+margin_bottom = 122.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 7
+size_flags_vertical = 1
+columns = 2
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Chassis" type="Label" parent="Box/Split/Main/Structure/Left/Box/BasicInfo/Box/Data"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 5.0
+margin_right = 65.0
+margin_bottom = 19.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Chassis"
+align = 2
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="ChassisEdit" type="LineEdit" parent="Box/Split/Main/Structure/Left/Box/BasicInfo/Box/Data"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 69.0
+margin_right = 473.0
+margin_bottom = 24.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+focus_mode = 2
+placeholder_alpha = 0.6
+caret_blink = false
+caret_blink_speed = 0.65
+context_menu_enabled = true
+
+[node name="Model" type="Label" parent="Box/Split/Main/Structure/Left/Box/BasicInfo/Box/Data"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 33.0
+margin_right = 65.0
+margin_bottom = 47.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Model"
+align = 2
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="ModelEdit" type="LineEdit" parent="Box/Split/Main/Structure/Left/Box/BasicInfo/Box/Data"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 69.0
+margin_top = 28.0
+margin_right = 473.0
+margin_bottom = 52.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+focus_mode = 2
+placeholder_alpha = 0.6
+caret_blink = false
+caret_blink_speed = 0.65
+context_menu_enabled = true
+
+[node name="Year" type="Label" parent="Box/Split/Main/Structure/Left/Box/BasicInfo/Box/Data"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 61.0
+margin_right = 65.0
+margin_bottom = 75.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Year"
+align = 2
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="YearEdit" type="SpinBox" parent="Box/Split/Main/Structure/Left/Box/BasicInfo/Box/Data"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 69.0
+margin_top = 56.0
+margin_right = 473.0
+margin_bottom = 80.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+min_value = 1400.0
+max_value = 4000.0
+step = 1.0
+page = 0.0
+value = 1400.0
+exp_edit = false
+rounded = false
+editable = true
+prefix = ""
+suffix = ""
+
+[node name="Era" type="Label" parent="Box/Split/Main/Structure/Left/Box/BasicInfo/Box/Data"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 89.0
+margin_right = 68.0
+margin_bottom = 103.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Era/Source"
+align = 2
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="EraEdit" type="LineEdit" parent="Box/Split/Main/Structure/Left/Box/BasicInfo/Box/Data"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 84.0
+margin_right = 258.0
+margin_bottom = 108.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+editable = false
+focus_mode = 2
+placeholder_alpha = 0.6
+caret_blink = false
+caret_blink_speed = 0.65
+context_menu_enabled = true
+
+[node name="TechBase" type="Label" parent="Box/Split/Main/Structure/Left/Box/BasicInfo/Box/Data"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 87.0
+margin_right = 65.0
+margin_bottom = 101.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Tech Base"
+align = 2
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="TechBaseEdit" type="OptionButton" parent="Box/Split/Main/Structure/Left/Box/BasicInfo/Box/Data"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 69.0
+margin_top = 84.0
+margin_right = 473.0
+margin_bottom = 104.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Inner Sphere"
+flat = false
+align = 0
+selected = 0
+items = [ "Inner Sphere", null, false, 0, null, "Clan", null, true, 1, null ]
+
+[node name="TechLevel" type="Label" parent="Box/Split/Main/Structure/Left/Box/BasicInfo/Box/Data"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 111.0
+margin_right = 68.0
+margin_bottom = 125.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Tech Level"
+align = 2
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="TechLevelEdit" type="OptionButton" parent="Box/Split/Main/Structure/Left/Box/BasicInfo/Box/Data"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 108.0
+margin_right = 222.0
+margin_bottom = 128.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Standard"
+flat = false
+align = 0
+selected = 0
+items = [ "Standard", null, false, 0, null ]
+
+[node name="Chassis" type="PanelContainer" parent="Box/Split/Main/Structure/Left/Box"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 517.0
+margin_right = 487.0
+margin_bottom = 1030.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 3.0
+
+[node name="Box" type="VBoxContainer" parent="Box/Split/Main/Structure/Left/Box/Chassis"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 480.0
+margin_bottom = 506.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 1
+
+[node name="Title" type="Label" parent="Box/Split/Main/Structure/Left/Box/Chassis/Box"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 473.0
+margin_bottom = 14.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+text = "Chassis"
+align = 2
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Mass" type="HBoxContainer" parent="Box/Split/Main/Structure/Left/Box/Chassis/Box"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 18.0
+margin_right = 473.0
+margin_bottom = 50.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 0
+
+[node name="Labels" type="VBoxContainer" parent="Box/Split/Main/Structure/Left/Box/Chassis/Box/Mass"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 234.0
+margin_bottom = 32.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 0
+
+[node name="Label" type="Label" parent="Box/Split/Main/Structure/Left/Box/Chassis/Box/Mass/Labels"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 234.0
+margin_bottom = 14.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+text = "Mass"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Label2" type="Label" parent="Box/Split/Main/Structure/Left/Box/Chassis/Box/Mass/Labels"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 18.0
+margin_right = 234.0
+margin_bottom = 32.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+text = "20 tons"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Box/Split/Main/Structure/Left/Box/Chassis/Box/Mass"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 238.0
+margin_right = 473.0
+margin_bottom = 32.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 1
+alignment = 0
+
+[node name="Add" type="Button" parent="Box/Split/Main/Structure/Left/Box/Chassis/Box/Mass/HBoxContainer"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 115.0
+margin_bottom = 32.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "+"
+flat = false
+
+[node name="Subtract" type="Button" parent="Box/Split/Main/Structure/Left/Box/Chassis/Box/Mass/HBoxContainer"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 119.0
+margin_right = 235.0
+margin_bottom = 32.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "-"
+flat = false
+
+[node name="Data" type="GridContainer" parent="Box/Split/Main/Structure/Left/Box/Chassis/Box"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 54.0
+margin_right = 473.0
+margin_bottom = 499.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 7
+size_flags_vertical = 7
+columns = 2
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Motive" type="Label" parent="Box/Split/Main/Structure/Left/Box/Chassis/Box/Data"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 3.0
+margin_right = 92.0
+margin_bottom = 17.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Motive Type"
+align = 2
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="MotiveEdit" type="OptionButton" parent="Box/Split/Main/Structure/Left/Box/Chassis/Box/Data"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 96.0
+margin_right = 473.0
+margin_bottom = 20.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Bipedal"
+flat = false
+align = 0
+selected = 0
+items = [ "Bipedal", null, false, 0, null ]
+
+[node name="Structure" type="Label" parent="Box/Split/Main/Structure/Left/Box/Chassis/Box/Data"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 27.0
+margin_right = 92.0
+margin_bottom = 41.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Structure Type"
+align = 2
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="StructureEdit" type="OptionButton" parent="Box/Split/Main/Structure/Left/Box/Chassis/Box/Data"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 96.0
+margin_top = 24.0
+margin_right = 473.0
+margin_bottom = 44.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Standard"
+flat = false
+align = 0
+selected = 0
+items = [ "Standard", null, false, 0, null, "Endo Steel", null, false, 1, null ]
+
+[node name="Engine" type="Label" parent="Box/Split/Main/Structure/Left/Box/Chassis/Box/Data"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 51.0
+margin_right = 92.0
+margin_bottom = 65.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Engine Type"
+align = 2
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="EngineEdit" type="OptionButton" parent="Box/Split/Main/Structure/Left/Box/Chassis/Box/Data"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 96.0
+margin_top = 48.0
+margin_right = 473.0
+margin_bottom = 68.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Standard"
+flat = false
+align = 0
+selected = 0
+items = [ "Standard", null, false, 0, null, "Extralight", null, false, 1, null ]
+
+[node name="Gyro" type="Label" parent="Box/Split/Main/Structure/Left/Box/Chassis/Box/Data"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 75.0
+margin_right = 92.0
+margin_bottom = 89.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Gyro Type"
+align = 2
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="GyroEdit" type="OptionButton" parent="Box/Split/Main/Structure/Left/Box/Chassis/Box/Data"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 96.0
+margin_top = 72.0
+margin_right = 473.0
+margin_bottom = 92.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Standard"
+flat = false
+align = 0
+selected = 0
+items = [ "Standard", null, false, 0, null ]
+
+[node name="Cockpit" type="Label" parent="Box/Split/Main/Structure/Left/Box/Chassis/Box/Data"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 99.0
+margin_right = 92.0
+margin_bottom = 113.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Cockpit"
+align = 2
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="CockpitEdit" type="OptionButton" parent="Box/Split/Main/Structure/Left/Box/Chassis/Box/Data"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 96.0
+margin_top = 96.0
+margin_right = 473.0
+margin_bottom = 116.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Standard"
+flat = false
+align = 0
+selected = 0
+items = [ "Standard", null, false, 0, null, "Primitive", null, false, 1, null ]
+
+[node name="Myomar" type="Label" parent="Box/Split/Main/Structure/Left/Box/Chassis/Box/Data"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 123.0
+margin_right = 92.0
+margin_bottom = 137.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Myomar"
+align = 2
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="MyomarEdit" type="OptionButton" parent="Box/Split/Main/Structure/Left/Box/Chassis/Box/Data"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 96.0
+margin_top = 120.0
+margin_right = 473.0
+margin_bottom = 140.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Standard"
+flat = false
+align = 0
+selected = 0
+items = [ "Standard", null, false, 0, null, "MASC", null, true, 1, null, "TSM", null, true, 2, null ]
+
+[node name="Center" type="PanelContainer" parent="Box/Split/Main/Structure"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 505.0
+margin_right = 1006.0
+margin_bottom = 1044.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Box" type="VBoxContainer" parent="Box/Split/Main/Structure/Center"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 494.0
+margin_bottom = 1037.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 0
+
+[node name="Armor" type="PanelContainer" parent="Box/Split/Main/Structure/Center/Box"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 487.0
+margin_bottom = 128.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Box" type="VBoxContainer" parent="Box/Split/Main/Structure/Center/Box/Armor"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 480.0
+margin_bottom = 121.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 0
+
+[node name="Title" type="Label" parent="Box/Split/Main/Structure/Center/Box/Armor/Box"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 473.0
+margin_bottom = 14.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+text = "Armor"
+align = 2
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Data" type="GridContainer" parent="Box/Split/Main/Structure/Center/Box/Armor/Box"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 18.0
+margin_right = 473.0
+margin_bottom = 66.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 7
+size_flags_vertical = 1
+columns = 2
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Type" type="Label" parent="Box/Split/Main/Structure/Center/Box/Armor/Box/Data"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 3.0
+margin_right = 97.0
+margin_bottom = 17.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Armor Type"
+align = 2
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="ArmorTypeEdit" type="OptionButton" parent="Box/Split/Main/Structure/Center/Box/Armor/Box/Data"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 101.0
+margin_right = 473.0
+margin_bottom = 20.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Standard"
+flat = false
+align = 0
+selected = 0
+items = [ "Standard", null, false, 0, null, "Ferro-Fibrous", null, true, 1, null ]
+
+[node name="Tonnage" type="Label" parent="Box/Split/Main/Structure/Center/Box/Armor/Box/Data"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 29.0
+margin_right = 97.0
+margin_bottom = 43.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Armor Tonnage"
+align = 2
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="ArmorMassEdit" type="SpinBox" parent="Box/Split/Main/Structure/Center/Box/Armor/Box/Data"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 101.0
+margin_top = 24.0
+margin_right = 473.0
+margin_bottom = 48.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+min_value = 0.0
+max_value = 100.0
+step = 0.5
+page = 0.0
+value = 0.0
+exp_edit = false
+rounded = false
+editable = true
+prefix = ""
+suffix = ""
+
+[node name="Max" type="Button" parent="Box/Split/Main/Structure/Center/Box/Armor/Box"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 70.0
+margin_right = 473.0
+margin_bottom = 90.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+disabled = true
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Maximize Armor"
+flat = false
+
+[node name="Remaining" type="Button" parent="Box/Split/Main/Structure/Center/Box/Armor/Box"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 94.0
+margin_right = 473.0
+margin_bottom = 114.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+disabled = true
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Use Remaining Tonnage"
+flat = false
+
+[node name="Movement" type="PanelContainer" parent="Box/Split/Main/Structure/Center/Box"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 132.0
+margin_right = 487.0
+margin_bottom = 286.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Box" type="VBoxContainer" parent="Box/Split/Main/Structure/Center/Box/Movement"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 480.0
+margin_bottom = 147.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 0
+
+[node name="Title" type="Label" parent="Box/Split/Main/Structure/Center/Box/Movement/Box"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 473.0
+margin_bottom = 14.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+text = "Movement"
+align = 2
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Data" type="GridContainer" parent="Box/Split/Main/Structure/Center/Box/Movement/Box"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 18.0
+margin_right = 473.0
+margin_bottom = 140.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 7
+size_flags_vertical = 1
+columns = 2
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="WalkMP" type="Label" parent="Box/Split/Main/Structure/Center/Box/Movement/Box/Data"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 5.0
+margin_right = 85.0
+margin_bottom = 19.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Walking MP"
+align = 2
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="WalkMPEdit" type="SpinBox" parent="Box/Split/Main/Structure/Center/Box/Movement/Box/Data"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 89.0
+margin_right = 473.0
+margin_bottom = 24.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+min_value = 1.0
+max_value = 100.0
+step = 1.0
+page = 0.0
+value = 1.0
+exp_edit = false
+rounded = false
+editable = true
+prefix = ""
+suffix = ""
+
+[node name="RunMP" type="Label" parent="Box/Split/Main/Structure/Center/Box/Movement/Box/Data"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 33.0
+margin_right = 85.0
+margin_bottom = 47.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Running MP"
+align = 2
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="RunMPEdit" type="SpinBox" parent="Box/Split/Main/Structure/Center/Box/Movement/Box/Data"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 89.0
+margin_top = 28.0
+margin_right = 473.0
+margin_bottom = 52.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+min_value = 0.0
+max_value = 100.0
+step = 1.0
+page = 0.0
+value = 0.0
+exp_edit = false
+rounded = false
+editable = false
+prefix = ""
+suffix = ""
+
+[node name="EngineRating" type="Label" parent="Box/Split/Main/Structure/Center/Box/Movement/Box/Data"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 56.0
+margin_right = 85.0
+margin_bottom = 70.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Engine Rating"
+align = 2
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="EngineRating2" type="Label" parent="Box/Split/Main/Structure/Center/Box/Movement/Box/Data"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 89.0
+margin_top = 56.0
+margin_right = 473.0
+margin_bottom = 70.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "000"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="JumpMP" type="Label" parent="Box/Split/Main/Structure/Center/Box/Movement/Box/Data"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 79.0
+margin_right = 85.0
+margin_bottom = 93.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Jump MP"
+align = 2
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="JumpMPEdit" type="SpinBox" parent="Box/Split/Main/Structure/Center/Box/Movement/Box/Data"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 89.0
+margin_top = 74.0
+margin_right = 473.0
+margin_bottom = 98.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+min_value = 0.0
+max_value = 100.0
+step = 1.0
+page = 0.0
+value = 0.0
+exp_edit = false
+rounded = false
+editable = true
+prefix = ""
+suffix = ""
+
+[node name="JumpType" type="Label" parent="Box/Split/Main/Structure/Center/Box/Movement/Box/Data"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 105.0
+margin_right = 85.0
+margin_bottom = 119.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Jumpjet Type"
+align = 2
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="JumpTypeEdit" type="OptionButton" parent="Box/Split/Main/Structure/Center/Box/Movement/Box/Data"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 89.0
+margin_top = 102.0
+margin_right = 473.0
+margin_bottom = 122.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+disabled = true
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Standard"
+flat = false
+align = 0
+selected = 0
+items = [ "Standard", null, false, 0, null ]
+
+[node name="HeatSinks" type="PanelContainer" parent="Box/Split/Main/Structure/Center/Box"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 290.0
+margin_right = 487.0
+margin_bottom = 388.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Box" type="VBoxContainer" parent="Box/Split/Main/Structure/Center/Box/HeatSinks"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 480.0
+margin_bottom = 91.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 0
+
+[node name="Title" type="Label" parent="Box/Split/Main/Structure/Center/Box/HeatSinks/Box"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 473.0
+margin_bottom = 14.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+text = "Heat Sinks"
+align = 2
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Data" type="GridContainer" parent="Box/Split/Main/Structure/Center/Box/HeatSinks/Box"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 18.0
+margin_right = 473.0
+margin_bottom = 66.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 7
+size_flags_vertical = 1
+columns = 2
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Type" type="Label" parent="Box/Split/Main/Structure/Center/Box/HeatSinks/Box/Data"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 3.0
+margin_right = 60.0
+margin_bottom = 17.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Sink Type"
+align = 2
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="TypeEdit" type="OptionButton" parent="Box/Split/Main/Structure/Center/Box/HeatSinks/Box/Data"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 64.0
+margin_right = 473.0
+margin_bottom = 20.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+disabled = true
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Standard"
+flat = false
+align = 0
+selected = 0
+items = [ "Standard", null, false, 0, null ]
+
+[node name="Count" type="Label" parent="Box/Split/Main/Structure/Center/Box/HeatSinks/Box/Data"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 29.0
+margin_right = 60.0
+margin_bottom = 43.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Number"
+align = 2
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="CountEdit" type="SpinBox" parent="Box/Split/Main/Structure/Center/Box/HeatSinks/Box/Data"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 64.0
+margin_top = 24.0
+margin_right = 473.0
+margin_bottom = 48.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+min_value = 10.0
+max_value = 100.0
+step = 1.0
+page = 0.0
+value = 10.0
+exp_edit = false
+rounded = false
+editable = true
+prefix = ""
+suffix = ""
+
+[node name="EngineFree" type="Label" parent="Box/Split/Main/Structure/Center/Box/HeatSinks/Box"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 70.0
+margin_right = 473.0
+margin_bottom = 84.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Engine Free: 1"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Summary" type="PanelContainer" parent="Box/Split/Main/Structure/Center/Box"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 392.0
+margin_right = 487.0
+margin_bottom = 1030.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 3.0
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Box" type="VBoxContainer" parent="Box/Split/Main/Structure/Center/Box/Summary"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 480.0
+margin_bottom = 631.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 0
+
+[node name="Title" type="Label" parent="Box/Split/Main/Structure/Center/Box/Summary/Box"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 473.0
+margin_bottom = 14.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+text = "Summary"
+align = 2
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="SummaryTree" type="Tree" parent="Box/Split/Main/Structure/Center/Box/Summary/Box"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 18.0
+margin_right = 473.0
+margin_bottom = 606.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Stats" type="HBoxContainer" parent="Box/Split/Main/Structure/Center/Box/Summary/Box"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 610.0
+margin_right = 473.0
+margin_bottom = 624.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 0
+
+[node name="Mass" type="Label" parent="Box/Split/Main/Structure/Center/Box/Summary/Box/Stats"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 155.0
+margin_bottom = 14.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+text = "Mass: 0 / 20"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Space" type="Label" parent="Box/Split/Main/Structure/Center/Box/Summary/Box/Stats"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 159.0
+margin_right = 314.0
+margin_bottom = 14.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+text = "Criticals: 0 / 78"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Heat" type="Label" parent="Box/Split/Main/Structure/Center/Box/Summary/Box/Stats"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 318.0
+margin_right = 473.0
+margin_bottom = 14.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+text = "Heat: 2 / 10"
+align = 2
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="ArmorAllocation" type="PanelContainer" parent="Box/Split/Main/Structure"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 1010.0
+margin_right = 1513.0
+margin_bottom = 1044.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Box" type="VBoxContainer" parent="Box/Split/Main/Structure/ArmorAllocation"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 496.0
+margin_bottom = 1037.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 0
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Title" type="Label" parent="Box/Split/Main/Structure/ArmorAllocation/Box"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 489.0
+margin_bottom = 14.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+text = "Armor Allocation"
+align = 2
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="1" type="HBoxContainer" parent="Box/Split/Main/Structure/ArmorAllocation/Box"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 18.0
+margin_right = 489.0
+margin_bottom = 92.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 1
+
+[node name="HD" type="PanelContainer" parent="Box/Split/Main/Structure/ArmorAllocation/Box/1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 200.0
+margin_right = 288.0
+margin_bottom = 74.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+
+[node name="Box" type="VBoxContainer" parent="Box/Split/Main/Structure/ArmorAllocation/Box/1/HD"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 81.0
+margin_bottom = 67.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 0
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Title" type="Label" parent="Box/Split/Main/Structure/ArmorAllocation/Box/1/HD/Box"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 74.0
+margin_bottom = 14.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+text = "HD"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="SpinBox" type="SpinBox" parent="Box/Split/Main/Structure/ArmorAllocation/Box/1/HD/Box"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 18.0
+margin_right = 74.0
+margin_bottom = 42.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+min_value = 0.0
+max_value = 100.0
+step = 1.0
+page = 0.0
+value = 0.0
+exp_edit = false
+rounded = false
+editable = true
+prefix = ""
+suffix = ""
+
+[node name="Max" type="Label" parent="Box/Split/Main/Structure/ArmorAllocation/Box/1/HD/Box"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 46.0
+margin_right = 74.0
+margin_bottom = 60.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+text = "Max:9"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="2" type="HBoxContainer" parent="Box/Split/Main/Structure/ArmorAllocation/Box"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 96.0
+margin_right = 489.0
+margin_bottom = 216.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 1
+
+[node name="LA" type="PanelContainer" parent="Box/Split/Main/Structure/ArmorAllocation/Box/2"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 16.0
+margin_right = 104.0
+margin_bottom = 120.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Box" type="VBoxContainer" parent="Box/Split/Main/Structure/ArmorAllocation/Box/2/LA"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 81.0
+margin_bottom = 113.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Title" type="Label" parent="Box/Split/Main/Structure/ArmorAllocation/Box/2/LA/Box"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 23.0
+margin_right = 74.0
+margin_bottom = 37.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+text = "LA"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="SpinBox" type="SpinBox" parent="Box/Split/Main/Structure/ArmorAllocation/Box/2/LA/Box"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 41.0
+margin_right = 74.0
+margin_bottom = 65.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+min_value = 0.0
+max_value = 100.0
+step = 1.0
+page = 0.0
+value = 0.0
+exp_edit = false
+rounded = false
+editable = true
+prefix = ""
+suffix = ""
+
+[node name="Max" type="Label" parent="Box/Split/Main/Structure/ArmorAllocation/Box/2/LA/Box"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 69.0
+margin_right = 74.0
+margin_bottom = 83.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+text = "Max:9"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="LT" type="PanelContainer" parent="Box/Split/Main/Structure/ArmorAllocation/Box/2"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 108.0
+margin_right = 196.0
+margin_bottom = 120.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+
+[node name="Box" type="VBoxContainer" parent="Box/Split/Main/Structure/ArmorAllocation/Box/2/LT"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 81.0
+margin_bottom = 113.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 0
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Title" type="Label" parent="Box/Split/Main/Structure/ArmorAllocation/Box/2/LT/Box"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 74.0
+margin_bottom = 14.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+text = "LT"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="SpinBox" type="SpinBox" parent="Box/Split/Main/Structure/ArmorAllocation/Box/2/LT/Box"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 18.0
+margin_right = 74.0
+margin_bottom = 42.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+min_value = 0.0
+max_value = 100.0
+step = 1.0
+page = 0.0
+value = 0.0
+exp_edit = false
+rounded = false
+editable = true
+prefix = ""
+suffix = ""
+
+[node name="Title2" type="Label" parent="Box/Split/Main/Structure/ArmorAllocation/Box/2/LT/Box"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 46.0
+margin_right = 74.0
+margin_bottom = 60.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+text = "Rear"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="SpinBox2" type="SpinBox" parent="Box/Split/Main/Structure/ArmorAllocation/Box/2/LT/Box"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 64.0
+margin_right = 74.0
+margin_bottom = 88.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+min_value = 0.0
+max_value = 100.0
+step = 1.0
+page = 0.0
+value = 0.0
+exp_edit = false
+rounded = false
+editable = true
+prefix = ""
+suffix = ""
+
+[node name="Max" type="Label" parent="Box/Split/Main/Structure/ArmorAllocation/Box/2/LT/Box"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 92.0
+margin_right = 74.0
+margin_bottom = 106.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+text = "Max:9"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="CT" type="PanelContainer" parent="Box/Split/Main/Structure/ArmorAllocation/Box/2"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 200.0
+margin_right = 288.0
+margin_bottom = 120.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+
+[node name="Box" type="VBoxContainer" parent="Box/Split/Main/Structure/ArmorAllocation/Box/2/CT"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 81.0
+margin_bottom = 113.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 0
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Title" type="Label" parent="Box/Split/Main/Structure/ArmorAllocation/Box/2/CT/Box"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 74.0
+margin_bottom = 14.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+text = "CT"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="SpinBox" type="SpinBox" parent="Box/Split/Main/Structure/ArmorAllocation/Box/2/CT/Box"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 18.0
+margin_right = 74.0
+margin_bottom = 42.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+min_value = 0.0
+max_value = 100.0
+step = 1.0
+page = 0.0
+value = 0.0
+exp_edit = false
+rounded = false
+editable = true
+prefix = ""
+suffix = ""
+
+[node name="Title2" type="Label" parent="Box/Split/Main/Structure/ArmorAllocation/Box/2/CT/Box"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 46.0
+margin_right = 74.0
+margin_bottom = 60.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+text = "Rear"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="SpinBox2" type="SpinBox" parent="Box/Split/Main/Structure/ArmorAllocation/Box/2/CT/Box"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 64.0
+margin_right = 74.0
+margin_bottom = 88.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+min_value = 0.0
+max_value = 100.0
+step = 1.0
+page = 0.0
+value = 0.0
+exp_edit = false
+rounded = false
+editable = true
+prefix = ""
+suffix = ""
+
+[node name="Max" type="Label" parent="Box/Split/Main/Structure/ArmorAllocation/Box/2/CT/Box"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 92.0
+margin_right = 74.0
+margin_bottom = 106.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+text = "Max:9"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="RT" type="PanelContainer" parent="Box/Split/Main/Structure/ArmorAllocation/Box/2"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 292.0
+margin_right = 380.0
+margin_bottom = 120.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+
+[node name="Box" type="VBoxContainer" parent="Box/Split/Main/Structure/ArmorAllocation/Box/2/RT"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 81.0
+margin_bottom = 113.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 0
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Title" type="Label" parent="Box/Split/Main/Structure/ArmorAllocation/Box/2/RT/Box"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 74.0
+margin_bottom = 14.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+text = "RT"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="SpinBox" type="SpinBox" parent="Box/Split/Main/Structure/ArmorAllocation/Box/2/RT/Box"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 18.0
+margin_right = 74.0
+margin_bottom = 42.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+min_value = 0.0
+max_value = 100.0
+step = 1.0
+page = 0.0
+value = 0.0
+exp_edit = false
+rounded = false
+editable = true
+prefix = ""
+suffix = ""
+
+[node name="Title2" type="Label" parent="Box/Split/Main/Structure/ArmorAllocation/Box/2/RT/Box"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 46.0
+margin_right = 74.0
+margin_bottom = 60.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+text = "Rear"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="SpinBox2" type="SpinBox" parent="Box/Split/Main/Structure/ArmorAllocation/Box/2/RT/Box"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 64.0
+margin_right = 74.0
+margin_bottom = 88.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+min_value = 0.0
+max_value = 100.0
+step = 1.0
+page = 0.0
+value = 0.0
+exp_edit = false
+rounded = false
+editable = true
+prefix = ""
+suffix = ""
+
+[node name="Max" type="Label" parent="Box/Split/Main/Structure/ArmorAllocation/Box/2/RT/Box"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 92.0
+margin_right = 74.0
+margin_bottom = 106.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+text = "Max:9"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="RA" type="PanelContainer" parent="Box/Split/Main/Structure/ArmorAllocation/Box/2"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 384.0
+margin_right = 472.0
+margin_bottom = 120.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Box" type="VBoxContainer" parent="Box/Split/Main/Structure/ArmorAllocation/Box/2/RA"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 81.0
+margin_bottom = 113.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Title" type="Label" parent="Box/Split/Main/Structure/ArmorAllocation/Box/2/RA/Box"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 23.0
+margin_right = 74.0
+margin_bottom = 37.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+text = "RA"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="SpinBox" type="SpinBox" parent="Box/Split/Main/Structure/ArmorAllocation/Box/2/RA/Box"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 41.0
+margin_right = 74.0
+margin_bottom = 65.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+min_value = 0.0
+max_value = 100.0
+step = 1.0
+page = 0.0
+value = 0.0
+exp_edit = false
+rounded = false
+editable = true
+prefix = ""
+suffix = ""
+
+[node name="Max" type="Label" parent="Box/Split/Main/Structure/ArmorAllocation/Box/2/RA/Box"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 69.0
+margin_right = 74.0
+margin_bottom = 83.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+text = "Max:9"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="3" type="HBoxContainer" parent="Box/Split/Main/Structure/ArmorAllocation/Box"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 220.0
+margin_right = 489.0
+margin_bottom = 294.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 1
+
+[node name="LL" type="PanelContainer" parent="Box/Split/Main/Structure/ArmorAllocation/Box/3"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 154.0
+margin_right = 242.0
+margin_bottom = 74.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+
+[node name="Box" type="VBoxContainer" parent="Box/Split/Main/Structure/ArmorAllocation/Box/3/LL"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 81.0
+margin_bottom = 67.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 0
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Title" type="Label" parent="Box/Split/Main/Structure/ArmorAllocation/Box/3/LL/Box"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 74.0
+margin_bottom = 14.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+text = "LL"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="SpinBox" type="SpinBox" parent="Box/Split/Main/Structure/ArmorAllocation/Box/3/LL/Box"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 18.0
+margin_right = 74.0
+margin_bottom = 42.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+min_value = 0.0
+max_value = 100.0
+step = 1.0
+page = 0.0
+value = 0.0
+exp_edit = false
+rounded = false
+editable = true
+prefix = ""
+suffix = ""
+
+[node name="Max" type="Label" parent="Box/Split/Main/Structure/ArmorAllocation/Box/3/LL/Box"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 46.0
+margin_right = 74.0
+margin_bottom = 60.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+text = "Max:9"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="RL" type="PanelContainer" parent="Box/Split/Main/Structure/ArmorAllocation/Box/3"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 246.0
+margin_right = 334.0
+margin_bottom = 74.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+
+[node name="Box" type="VBoxContainer" parent="Box/Split/Main/Structure/ArmorAllocation/Box/3/RL"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 81.0
+margin_bottom = 67.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 0
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Title" type="Label" parent="Box/Split/Main/Structure/ArmorAllocation/Box/3/RL/Box"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 74.0
+margin_bottom = 14.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+text = "RL"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="SpinBox" type="SpinBox" parent="Box/Split/Main/Structure/ArmorAllocation/Box/3/RL/Box"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 18.0
+margin_right = 74.0
+margin_bottom = 42.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+min_value = 0.0
+max_value = 100.0
+step = 1.0
+page = 0.0
+value = 0.0
+exp_edit = false
+rounded = false
+editable = true
+prefix = ""
+suffix = ""
+
+[node name="Max" type="Label" parent="Box/Split/Main/Structure/ArmorAllocation/Box/3/RL/Box"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 46.0
+margin_right = 74.0
+margin_bottom = 60.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+text = "Max:9"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Equipment" type="HBoxContainer" parent="Box/Split/Main"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 0
+script = ExtResource( 3 )
+_sections_unfolded = [ "Margin" ]
+
+[node name="Left" type="VBoxContainer" parent="Box/Split/Main/Equipment"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 299.0
+margin_bottom = 1044.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 0
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Right" type="VBoxContainer" parent="Box/Split/Main/Equipment"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 303.0
+margin_right = 1200.0
+margin_bottom = 1044.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 3.0
+alignment = 0
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Filter" type="HBoxContainer" parent="Box/Split/Main/Equipment/Right"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 897.0
+margin_bottom = 20.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 0
+
+[node name="FilterList" type="OptionButton" parent="Box/Split/Main/Equipment/Right/Filter"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 897.0
+margin_bottom = 20.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = false
+align = 0
+selected = -1
+items = [  ]
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="EquipmentList" type="Tree" parent="Box/Split/Main/Equipment/Right"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 24.0
+margin_right = 897.0
+margin_bottom = 1044.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Assign Criticals" type="HBoxContainer" parent="Box/Split/Main"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 0
+script = ExtResource( 4 )
+_sections_unfolded = [ "Margin" ]
+
+[node name="Info" type="PanelContainer" parent="Box/Split"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 1533.0
+margin_right = 1920.0
+margin_bottom = 1080.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource( 5 )
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Box/Split/Info"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 380.0
+margin_bottom = 1073.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 0
+
+[node name="Text" type="RichTextLabel" parent="Box/Split/Info/VBoxContainer"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 373.0
+margin_bottom = 1042.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+bbcode_enabled = true
+bbcode_text = ""
+visible_characters = -1
+percent_visible = 1.0
+override_selected_font_color = false
+_sections_unfolded = [ "BBCode", "Size Flags" ]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Box/Split/Info/VBoxContainer"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 1046.0
+margin_right = 373.0
+margin_bottom = 1066.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 0
+
+[node name="Button" type="Button" parent="Box/Split/Info/VBoxContainer/HBoxContainer"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 184.0
+margin_bottom = 20.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Refresh"
+flat = false
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Button2" type="Button" parent="Box/Split/Info/VBoxContainer/HBoxContainer"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 188.0
+margin_right = 373.0
+margin_bottom = 20.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Copy"
+flat = false
+_sections_unfolded = [ "Size Flags" ]
+
+[connection signal="text_changed" from="Box/Split/Main/Structure/Left/Box/BasicInfo/Box/Data/ChassisEdit" to="." method="_on_ChassisEdit_text_changed"]
+
+[connection signal="text_changed" from="Box/Split/Main/Structure/Left/Box/BasicInfo/Box/Data/ModelEdit" to="." method="_on_ModelEdit_text_changed"]
+
+[connection signal="value_changed" from="Box/Split/Main/Structure/Left/Box/BasicInfo/Box/Data/YearEdit" to="." method="_on_YearEdit_value_changed"]
+
+[connection signal="item_selected" from="Box/Split/Main/Structure/Left/Box/BasicInfo/Box/Data/TechBaseEdit" to="." method="_on_TechBaseEdit_item_selected"]
+
+[connection signal="item_selected" from="Box/Split/Main/Structure/Left/Box/Chassis/Box/Data/MotiveEdit" to="." method="_on_MotiveEdit_item_selected"]
+
+[connection signal="item_selected" from="Box/Split/Main/Structure/Left/Box/Chassis/Box/Data/StructureEdit" to="." method="_on_StructureEdit_item_selected"]
+
+[connection signal="item_selected" from="Box/Split/Main/Structure/Left/Box/Chassis/Box/Data/EngineEdit" to="." method="_on_EngineEdit_item_selected"]
+
+[connection signal="item_selected" from="Box/Split/Main/Structure/Left/Box/Chassis/Box/Data/GyroEdit" to="." method="_on_GyroEdit_item_selected"]
+
+[connection signal="item_selected" from="Box/Split/Main/Structure/Left/Box/Chassis/Box/Data/CockpitEdit" to="." method="_on_CockpitEdit_item_selected"]
+
+[connection signal="item_selected" from="Box/Split/Main/Structure/Left/Box/Chassis/Box/Data/MyomarEdit" to="." method="_on_MyomarEdit_item_selected"]
+
+[connection signal="item_selected" from="Box/Split/Main/Structure/Center/Box/Armor/Box/Data/ArmorTypeEdit" to="." method="_on_ArmorTypeEdit_item_selected"]
+
+[connection signal="value_changed" from="Box/Split/Main/Structure/Center/Box/Armor/Box/Data/ArmorMassEdit" to="." method="_on_ArmorMassEdit_value_changed"]
+
+[connection signal="value_changed" from="Box/Split/Main/Structure/Center/Box/Movement/Box/Data/WalkMPEdit" to="." method="_on_WalkMPEdit_value_changed"]
+
+[connection signal="value_changed" from="Box/Split/Main/Structure/Center/Box/Movement/Box/Data/JumpMPEdit" to="." method="_on_JumpMPEdit_value_changed"]
+
+[connection signal="value_changed" from="Box/Split/Main/Structure/Center/Box/HeatSinks/Box/Data/CountEdit" to="." method="_on_CountEdit_value_changed"]
+
+

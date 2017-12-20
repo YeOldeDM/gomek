@@ -1,0 +1,16 @@
+[gd_resource type="Shader" format=2]
+
+[resource]
+
+code = "shader_type canvas_item;
+uniform sampler2D CAMO;
+
+
+void fragment() {
+	vec4 c = textureLod(TEXTURE, UV, 0.0).rgba;
+	float a = c.a;
+	if (a >= 0.5)
+		c.rgb *= textureLod(CAMO, UV, 0.0).rgb;
+	COLOR.rgba = c;
+	}"
+

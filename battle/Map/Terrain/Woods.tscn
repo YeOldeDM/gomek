@@ -1,0 +1,56 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://battle/Map/Terrain/Woods.gd" type="Script" id=1]
+[ext_resource path="res://assets/graphics/trees.png" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 2, 2 )
+
+[node name="Woods" type="Node2D"]
+
+position = Vector2( 300, 170 )
+script = ExtResource( 1 )
+
+[node name="Hex" type="Area2D" parent="."]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Hex"]
+
+build_mode = 0
+polygon = PoolVector2Array( 10, 0, 50, 0, 70, 34, 50, 68, 10, 68, -10, 34 )
+
+[node name="Tree" type="Area2D" parent="." groups=[
+"tree",
+]]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Animation", "Transform" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tree"]
+
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="Tree"]
+
+scale = Vector2( 2, 2 )
+texture = ExtResource( 2 )
+vframes = 2
+hframes = 4
+_sections_unfolded = [ "Animation", "Transform" ]
+
+

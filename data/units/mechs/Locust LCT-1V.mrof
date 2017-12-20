@@ -1,0 +1,54 @@
+Version:1.0
+
+
+Chassis:Locust
+Model:LCT-1V
+ 
+Config:Biped 
+TechBase:Inner Sphere 
+Year:2499
+
+Custom BV:432
+Custom Cost:1512400
+
+Mass:20
+Walk MP: 8
+Engine:Standard 
+Gyro:Standard
+Cockpit:Standard
+Structure:Standard 
+Myomer:Standard 
+Heat Sinks:10 Single
+Armor:4.0 Standard
+
+Armor Points:
+LA:4
+RA:4
+LT:8
+RT:8
+CT:10
+HD:8
+LL:8
+RL:8
+RTR:2
+LTR:2
+CTR:2
+
+
+Equipment:
+0:Weapon:Machine Gun:LA
+1:Weapon:Machine Gun:RA
+2:Weapon:Medium Laser:CT
+3:Ammo:Machine Gun:CT
+
+Critical Slots:
+Left Arm:		Shoulder,	UpperArm,	LowerArm,	@0,			-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-
+Right Arm:		Shoulder,	UpperArm,	LowerArm,	@1,			-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-
+Left Torso:		-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-
+Right Torso:	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-
+Center Torso:	Engine,		Engine,		Engine,		Gyro,		Gyro,		Gyro,		Gyro,		Engine,		Engine,		Engine,		@2,			@3
+Head:			LifeSupport,Sensors,	Cockpit,	-Empty-,	Sensors,	LifeSupport
+Left Leg:		Hip,		UpperLeg,	LowerLeg,	Foot,		HeatSink,	HeatSink
+Right Leg:		Hip,		UpperLeg,	LowerLeg,	Foot,		HeatSink,	HeatSink
+
+

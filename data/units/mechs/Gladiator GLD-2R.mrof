@@ -1,0 +1,53 @@
+Version:1.0
+
+
+Chassis:Gladiator
+Model:GLD-2R
+ 
+Config:Biped 
+TechBase:Inner Sphere 
+Year:2487 
+
+Custom BV:1184
+Custom Cost:4312307
+
+Mass:55
+Walk MP: 5
+Engine:Standard 
+Gyro:Standard
+Cockpit:Standard
+Structure:Standard 
+Myomer:Standard 
+Heat Sinks:19 Single
+Armor:12.0 Standard
+
+Armor Points:
+LA:18
+RA:18
+LT:20
+RT:20
+CT:27
+HD:9
+LL:26
+RL:26
+RTR:6
+LTR:6
+CTR:9
+
+
+Equipment:
+0:Weapon:Medium Laser:LA
+1:Weapon:Medium Laser:LA
+2:Weapon:Large Laser:RA
+
+Critical Slots:
+Left Arm:		Shoulder,	UpperArm,	LowerArm,	Hand,		@0,			@1,			-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-
+Right Arm:		Shoulder,	UpperArm,	LowerArm,	Hand,		@2,			@2,			-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-
+Left Torso:		HeatSink,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-
+Right Torso:	HeatSink,	@4,			@8,			@9,			-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-
+Center Torso:	Engine,		Engine,		Engine,		Gyro,		Gyro,		Gyro,		Gyro,		Engine,		Engine,		Engine,		HeatSink,	-Empty-
+Head:			LifeSupport,Sensors,	Cockpit,	HeatSink,	Sensors,	LifeSupport
+Left Leg:		Hip,		UpperLeg,	LowerLeg,	Foot,		HeatSink,	HeatSink
+Right Leg:		Hip,		UpperLeg,	LowerLeg,	Foot,		HeatSink,	HeatSink
+
+

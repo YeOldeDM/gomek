@@ -1,0 +1,25 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=2]
+
+[ext_resource path="res://assets/graphics/camo/fedsuns/1st Royal Cavaliers RCT.png" type="Texture" id=1]
+
+[sub_resource type="Shader" id=1]
+
+code = "shader_type canvas_item;
+uniform sampler2D CAMO;
+
+
+void fragment() {
+	vec4 c = textureLod(TEXTURE, UV, 0.0).rgba;
+	float a = c.a;
+	if (a >= 0.5)
+		c.rgb *= textureLod(CAMO, UV, 0.0).rgb;
+	COLOR.rgba = c;
+	}"
+
+[resource]
+
+resource_local_to_scene = true
+render_priority = 0
+shader = SubResource( 1 )
+shader_param/CAMO = ExtResource( 1 )
+

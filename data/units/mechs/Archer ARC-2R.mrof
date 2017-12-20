@@ -1,0 +1,61 @@
+Version:1.0
+
+
+Chassis:Archer
+Model:ARC-2R
+ 
+Config:Biped 
+TechBase:Inner Sphere 
+Year:2474  
+
+Custom BV:1477
+Custom Cost:6384973
+
+Mass:70
+Walk MP: 4 
+Jump MP: 0
+Engine:Standard 
+Gyro:Standard
+Cockpit:Standard
+Structure:Standard 
+Myomer:Standard 
+Heat Sinks:10 Single
+Armor:13.0 Standard
+
+Armor Points:
+LA:22
+RA:22
+LT:24
+RT:24
+CT:33
+HD:9
+LL:26
+RL:26
+RTR:6
+LTR:10
+CTR:6
+
+
+Equipment:
+0:Weapon:Medium Laser:LA
+1:Weapon:Medium Laser:RA
+2:Weapon:LRM 20:LT
+3:Weapon:LRM 20:RT
+4:Weapon:Medium Laser:CT(R)
+5:Weapon:Medium Laser:CT(R)
+6:Ammo:LRM 20:LT
+7:Ammo:LRM 20:LT
+8:Ammo:LRM 20:RT
+9:Ammo:LRM 20:RT
+
+Critical Slots:
+Left Arm:		Shoulder,	UpperArm,	LowerArm,	Hand,		@0,			-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-
+Right Arm:		Shoulder,	UpperArm,	LowerArm,	Hand,		@1,			-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-
+Left Torso:		@2,			@2,			@2,			@2,			@6,			@7,			-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-
+Right Torso:	@3,			@3,			@3,			@3,			@8,			@9,			-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-
+Center Torso:	Engine,		Engine,		Engine,		Gyro,		Gyro,		Gyro,		Gyro,		Engine,		Engine,		Engine,		@4,			@5
+Head:			LifeSupport,Sensors,	Cockpit,	-Empty-,	Sensors,	LifeSupport
+Left Leg:		Hip,		UpperLeg,	LowerLeg,	Foot,		-Empty-,	-Empty-
+Right Leg:		Hip,		UpperLeg,	LowerLeg,	Foot,		-Empty-,	-Empty-
+
+

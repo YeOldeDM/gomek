@@ -1,0 +1,89 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://assets/graphics/hex_base_2.png" type="Texture" id=1]
+
+[node name="Node" type="Node"]
+
+[node name="hex_base" type="Sprite" parent="."]
+
+position = Vector2( 257.654, 0.622454 )
+texture = ExtResource( 1 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="E-5" type="Sprite" parent="."]
+
+modulate = Color( 0.509804, 0.215686, 0.215686, 1 )
+position = Vector2( 57.7085, -155.217 )
+texture = ExtResource( 1 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="E-4" type="Sprite" parent="."]
+
+modulate = Color( 0.588235, 0.294118, 0.294118, 1 )
+position = Vector2( -2.56909, -118.462 )
+texture = ExtResource( 1 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="E-3" type="Sprite" parent="."]
+
+modulate = Color( 0.666667, 0.372549, 0.372549, 1 )
+position = Vector2( 59.1786, -84.6482 )
+texture = ExtResource( 1 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="E-2" type="Sprite" parent="."]
+
+modulate = Color( 0.745098, 0.45098, 0.45098, 1 )
+position = Vector2( -2.56909, -49.3638 )
+texture = ExtResource( 1 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="E-1" type="Sprite" parent="."]
+
+modulate = Color( 0.823529, 0.529412, 0.529412, 1 )
+position = Vector2( 59.9137, -14.0794 )
+texture = ExtResource( 1 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="E0" type="Sprite" parent="."]
+
+modulate = Color( 0.607843, 0.607843, 0.607843, 1 )
+position = Vector2( -1.83398, 22.6752 )
+texture = ExtResource( 1 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="E1" type="Sprite" parent="."]
+
+modulate = Color( 0.686275, 0.686275, 0.686275, 1 )
+position = Vector2( 58.166, 56.6752 )
+texture = ExtResource( 1 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="E2" type="Sprite" parent="."]
+
+modulate = Color( 0.764706, 0.764706, 0.764706, 1 )
+position = Vector2( -1.83398, 90.6752 )
+texture = ExtResource( 1 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="E3" type="Sprite" parent="."]
+
+modulate = Color( 0.843137, 0.843137, 0.843137, 1 )
+position = Vector2( 58.166, 124.675 )
+texture = ExtResource( 1 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="E4" type="Sprite" parent="."]
+
+modulate = Color( 0.921569, 0.921569, 0.921569, 1 )
+position = Vector2( -1.83398, 158.675 )
+texture = ExtResource( 1 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="E5" type="Sprite" parent="."]
+
+position = Vector2( 58.5373, 194.5 )
+texture = ExtResource( 1 )
+_sections_unfolded = [ "Visibility" ]
+
+

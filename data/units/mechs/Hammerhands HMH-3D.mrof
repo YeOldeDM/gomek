@@ -1,0 +1,61 @@
+Version:1.0
+
+
+Chassis:Hammerhands
+Model:HMH-3D
+ 
+Config:Biped 
+TechBase:Inner Sphere 
+Year:2475  
+
+Custom BV:1381
+Custom Cost:6207250
+
+Mass:75
+Walk MP: 3
+Jump MP: 3
+Engine:Standard 
+Gyro:Standard
+Cockpit:Standard
+Structure:Standard 
+Myomer:Standard 
+Heat Sinks:13 Single
+Armor:11.5 Standard
+
+Armor Points:
+LA:20
+RA:20
+LT:20
+RT:20
+CT:30
+HD:9
+LL:23
+RL:23
+RTR:5
+LTR:5
+CTR:9
+
+
+Equipment:
+0:Weapon:Autocannon/10:LA
+1:Weapon:MediumLaser:LA
+2:Weapon:Autocannon/10:RA
+3:Weapon:Medium Laser:RA
+4:Weapon:SRM 6:RT
+5:Ammo:Autocannon/10:LA
+6:Ammo:Autocannon/10:RA
+7:Ammo:Autocannon/10:LT
+8:Ammo:Autocannon/10:RT
+9:Ammo:SRM 6:RT
+
+Critical Slots:
+Left Arm:		Shoulder,	UpperArm,	LowerArm,	@0,			@0,			@0,			@0,			@0,			@0,			@0,			@1,			@5
+Right Arm:		Shoulder,	UpperArm,	LowerArm,	@2,			@2,			@2,			@2,			@2,			@2,			@2,			@3,			@6
+Left Torso:		@7,			-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-
+Right Torso:	@4,			@4,			@8,			@9,			-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-
+Center Torso:	Engine,		Engine,		Engine,		Gyro,		Gyro,		Gyro,		Gyro,		Engine,		Engine,		Engine,		HeatSink,	JumpJet
+Head:			LifeSupport,Sensors,	Cockpit,	HeatSink,	Sensors,	LifeSupport
+Left Leg:		Hip,		UpperLeg,	LowerLeg,	Foot,		HeatSink,	JumpJet
+Right Leg:		Hip,		UpperLeg,	LowerLeg,	Foot,		HeatSink,	JumpJet
+
+

@@ -1,0 +1,55 @@
+Version:1.0
+
+
+Chassis:Stinger
+Model:STG-3R
+ 
+Config:Biped 
+TechBase:Inner Sphere 
+Year:2479 
+
+Custom BV:359
+Custom Cost:1615440
+
+Mass:20
+Walk MP: 6
+Jump MP: 6
+Engine:Standard 
+Gyro:Standard
+Cockpit:Standard
+Structure:Standard 
+Myomer:Standard 
+Heat Sinks:10 Single
+Armor:3.0 Standard
+
+Armor Points:
+LA:4
+RA:4
+LT:6
+RT:6
+CT:6
+HD:4
+LL:5
+RL:5
+RTR:2
+LTR:2
+CTR:4
+
+
+Equipment:
+0:Weapon:Machine Gun:LA
+1:Weapon:Medium Laser:RA
+2:Weapon:Machine Gun:RA
+3:Ammo:Machine Gun:CT
+
+Critical Slots:
+Left Arm:		Shoulder,	UpperArm,	LowerArm,	Hand,		@0,			-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-
+Right Arm:		Shoulder,	UpperArm,	LowerArm,	Hand,		@1,			@2,			-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-
+Left Torso:		HeatSink,	HeatSink,	HeatSink,	JumpJet,	JumpJet,	JumpJet,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-
+Right Torso:	HeatSink,	HeatSink,	HeatSink,	JumpJet,	JumpJet,	JumpJet,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-
+Center Torso:	Engine,		Engine,		Engine,		Gyro,		Gyro,		Gyro,		Gyro,		Engine,		Engine,		Engine,		@3,			-Empty-
+Head:			LifeSupport,Sensors,	Cockpit,	-Empty-,	Sensors,	LifeSupport
+Left Leg:		Hip,		UpperLeg,	LowerLeg,	Foot,		-Empty-,	-Empty-
+Right Leg:		Hip,		UpperLeg,	LowerLeg,	Foot,		-Empty-,	-Empty-
+
+

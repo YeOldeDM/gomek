@@ -1,0 +1,54 @@
+Version:1.0
+
+
+Chassis:Wasp
+Model:WSP-1A
+ 
+Config:Biped 
+TechBase:Inner Sphere 
+Year:2471  
+
+Custom BV:384
+Custom Cost:1646640
+
+Mass:20
+Walk MP: 6 
+Jump MP: 6
+Engine:Standard 
+Gyro:Standard
+Cockpit:Standard
+Structure:Standard 
+Myomer:Standard 
+Heat Sinks:10 Single
+Armor:3.0 Standard
+
+Armor Points:
+LA:4
+RA:4
+LT:6
+RT:6
+CT:6
+HD:4
+LL:5
+RL:5
+RTR:2
+LTR:2
+CTR:4 
+
+
+Equipment:
+0:Weapon:SRM 2:LL
+1:Weapon:Medium Laser:RA
+2:Ammo:SRM 2:LT
+
+Critical Slots:
+Left Arm:		Shoulder,	UpperArm,	LowerArm,	Hand,		-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-
+Right Arm:		Shoulder,	UpperArm,	LowerArm,	Hand,		@1,			-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-
+Left Torso:		HeatSink,	HeatSink,	HeatSink,	JumpJet,	@2,			-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-
+Right Torso:	HeatSink,	HeatSink,	HeatSink,	JumpJet,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-
+Center Torso:	Engine,		Engine,		Engine,		Gyro,		Gyro,		Gyro,		Gyro,		Engine,		Engine,		Engine,		JumpJet,	JumpJet
+Head:			LifeSupport,Sensors,	Cockpit,	-Empty-,	Sensors,	LifeSupport
+Left Leg:		Hip,		UpperLeg,	LowerLeg,	Foot,		JumpJet,	@0
+Right Leg:		Hip,		UpperLeg,	LowerLeg,	Foot,		JumpJet,	-Empty-
+
+

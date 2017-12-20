@@ -1,0 +1,57 @@
+Version:1.0
+
+
+Chassis:Crossbow
+Model:CRS-6B
+ 
+Config:Biped 
+TechBase:Inner Sphere 
+Year:2473  
+
+Custom BV:1210
+Custom Cost:5270400
+
+Mass:60
+Walk MP:5 
+Engine:Standard 
+Gyro:Standard
+Cockpit:Standard
+Structure:Standard 
+Myomer:Standard 
+Heat Sinks:10 Single
+Armor:8.0 Standard
+
+Armor Points:
+LA:13
+RA:13
+LT:14
+RT:14
+CT:17
+HD:8
+LL:16
+RL:16
+RTR:5
+LTR:5
+CTR:7
+
+
+Equipment:
+0:Weapon:LRM 10:LA 
+1:Weapon:LRM 10:RA
+2:Weapon:Medium Laser:LA
+3:Weapon:Medium Laser:RA
+4:Weapon:PPC:RT
+5:Ammo:LRM 10:LA
+2:Ammo:LRM 10:RA
+
+Critical Slots:
+Left Arm:		Shoulder,	UpperArm,	LowerArm,	@0,			@0,			@2,			@5,			-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-
+Right Arm:		Shoulder,	UpperArm,	LowerArm,	@0,			@0,			@2,			@5,			-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-
+Left Torso:		-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-
+Right Torso:	@4,			@4,			@4,			-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-
+Center Torso:	Engine,		Engine,		Engine,		Gyro,		Gyro,		Gyro,		Gyro,		Engine,		Engine,		Engine,		-Empty-,	-Empty-
+Head:			LifeSupport,Sensors,	Cockpit,	-Empty-,	Sensors,	LifeSupport
+Left Leg:		Hip,		UpperLeg,	LowerLeg,	Foot,		-Empty-,	-Empty-
+Right Leg:		Hip,		UpperLeg,	LowerLeg,	Foot,		-Empty-,	-Empty-
+
+

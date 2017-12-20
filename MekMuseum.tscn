@@ -1,0 +1,156 @@
+[gd_scene load_steps=24 format=2]
+
+[ext_resource path="res://minis/MekMini.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/graphics/camo/fedsuns/1st Kathil Uhlans.png" type="Texture" id=2]
+[ext_resource path="res://assets/graphics/units/meks/Commando COM-1D.png" type="Texture" id=3]
+[ext_resource path="res://assets/graphics/camo/fedsuns/1st Aragon Borderers.png" type="Texture" id=4]
+[ext_resource path="res://assets/graphics/units/meks/Archer ARC-2R.png" type="Texture" id=5]
+[ext_resource path="res://assets/graphics/camo/fedsuns/1st Federated Suns Armored Cavalry.png" type="Texture" id=6]
+[ext_resource path="res://assets/graphics/units/meks/Ymir BWP-2B.png" type="Texture" id=7]
+[ext_resource path="res://assets/graphics/camo/fedsuns/1st Royal Cavaliers RCT.png" type="Texture" id=8]
+[ext_resource path="res://assets/graphics/units/meks/Battleaxe BKX-7K.png" type="Texture" id=9]
+[ext_resource path="res://assets/graphics/camo/fedsuns/1st Capellan Dragoons.png" type="Texture" id=10]
+[ext_resource path="res://assets/graphics/units/meks/Hammerhands HMH-3D.png" type="Texture" id=11]
+[ext_resource path="res://assets/graphics/camo/fedsuns/1st Argyle Lancers.png" type="Texture" id=12]
+[ext_resource path="res://assets/graphics/units/meks/Mackie MSK-5S.png" type="Texture" id=13]
+[ext_resource path="res://assets/graphics/camo/fedsuns/1st Albion Training Cadre.png" type="Texture" id=14]
+[ext_resource path="res://assets/graphics/units/meks/Banshee BNC-3E.png" type="Texture" id=15]
+
+[sub_resource type="Shader" id=1]
+
+code = "shader_type canvas_item;
+uniform sampler2D CAMO;
+
+
+void fragment() {
+	vec4 c = textureLod(TEXTURE, UV, 0.0).rgba;
+	float a = c.a;
+	if (a >= 0.5)
+		c.rgb *= textureLod(CAMO, UV, 0.0).rgb;
+	COLOR.rgba = c;
+	}"
+
+[sub_resource type="ShaderMaterial" id=2]
+
+resource_local_to_scene = true
+render_priority = 0
+shader = SubResource( 1 )
+shader_param/CAMO = ExtResource( 2 )
+
+[sub_resource type="ShaderMaterial" id=3]
+
+resource_local_to_scene = true
+render_priority = 0
+shader = SubResource( 1 )
+shader_param/CAMO = ExtResource( 4 )
+
+[sub_resource type="ShaderMaterial" id=4]
+
+resource_local_to_scene = true
+render_priority = 0
+shader = SubResource( 1 )
+shader_param/CAMO = ExtResource( 6 )
+
+[sub_resource type="ShaderMaterial" id=5]
+
+resource_local_to_scene = true
+render_priority = 0
+shader = SubResource( 1 )
+shader_param/CAMO = ExtResource( 8 )
+
+[sub_resource type="ShaderMaterial" id=6]
+
+resource_local_to_scene = true
+render_priority = 0
+shader = SubResource( 1 )
+shader_param/CAMO = ExtResource( 10 )
+
+[sub_resource type="ShaderMaterial" id=7]
+
+resource_local_to_scene = true
+render_priority = 0
+shader = SubResource( 1 )
+shader_param/CAMO = ExtResource( 12 )
+
+[sub_resource type="ShaderMaterial" id=8]
+
+resource_local_to_scene = true
+render_priority = 0
+shader = SubResource( 1 )
+shader_param/CAMO = ExtResource( 14 )
+
+[node name="MekMuseum" type="Node2D"]
+
+[node name="MekUnit" parent="." instance=ExtResource( 1 )]
+
+position = Vector2( 430.939, 49.3504 )
+
+[node name="Torso" parent="MekUnit/Base"]
+
+material = SubResource( 2 )
+texture = ExtResource( 3 )
+
+[node name="MekUnit2" parent="." instance=ExtResource( 1 )]
+
+position = Vector2( 129.687, 53.4244 )
+
+[node name="Torso" parent="MekUnit2/Base"]
+
+material = SubResource( 3 )
+texture = ExtResource( 5 )
+
+[node name="MekUnit3" parent="." instance=ExtResource( 1 )]
+
+position = Vector2( 360.369, 46.6303 )
+rotation = 1.07856
+
+[node name="Torso" parent="MekUnit3/Base"]
+
+material = SubResource( 4 )
+texture = ExtResource( 7 )
+
+[node name="MekUnit4" parent="." instance=ExtResource( 1 )]
+
+position = Vector2( 496.019, 51.002 )
+rotation = -1.00822
+
+[node name="Torso" parent="MekUnit4/Base"]
+
+material = SubResource( 5 )
+texture = ExtResource( 9 )
+
+[node name="MekUnit5" parent="." instance=ExtResource( 1 )]
+
+position = Vector2( 287.388, 53.7855 )
+
+[node name="Torso" parent="MekUnit5/Base"]
+
+material = SubResource( 6 )
+texture = ExtResource( 11 )
+
+[node name="MekUnit6" parent="." instance=ExtResource( 1 )]
+
+position = Vector2( 206.774, 49.7428 )
+
+[node name="Torso" parent="MekUnit6/Base"]
+
+material = SubResource( 7 )
+texture = ExtResource( 13 )
+
+[node name="MekUnit7" parent="." instance=ExtResource( 1 )]
+
+position = Vector2( 46.3291, 49.7429 )
+
+[node name="Torso" parent="MekUnit7/Base"]
+
+material = SubResource( 8 )
+texture = ExtResource( 15 )
+
+
+[editable path="MekUnit"]
+[editable path="MekUnit2"]
+[editable path="MekUnit3"]
+[editable path="MekUnit4"]
+[editable path="MekUnit5"]
+[editable path="MekUnit6"]
+[editable path="MekUnit7"]

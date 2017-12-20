@@ -1,0 +1,55 @@
+Version:1.0
+
+
+Chassis:Commando
+Model:COM-2D
+ 
+Config:Biped 
+TechBase:Inner Sphere 
+Year:2486 
+
+Custom BV:541
+Custom Cost:1891250
+
+Mass:25
+Walk MP: 6
+Engine:Standard 
+Gyro:Standard
+Cockpit:Standard
+Structure:Standard 
+Myomer:Standard 
+Heat Sinks:10 Single
+Armor:4.0 Standard
+
+Armor Points:
+LA:6
+RA:6
+LT:6
+RT:6
+CT:8
+HD:6
+LL:8
+RL:8
+RTR:3
+LTR:3
+CTR:4
+
+
+Equipment:
+0:Weapon:Medium Laser:LA
+1:Weapon:SRM 4:RA
+2:Weapon:SRM 6:CT
+3:Ammo:SRM 6:LT
+4:Ammo:SRM 4:RT
+
+Critical Slots:
+Left Arm:		Shoulder,	UpperArm,	LowerArm,	Hand,		@0,			-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-
+Right Arm:		Shoulder,	UpperArm,	LowerArm,	Hand,		@1,			-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-
+Left Torso:		HeatSink,	HeatSink,	@3,			-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-
+Right Torso:	HeatSink,	HeatSink,	@4,			-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-
+Center Torso:	Engine,		Engine,		Engine,		Gyro,		Gyro,		Gyro,		Gyro,		Engine,		Engine,		Engine,		@2,			@2
+Head:			LifeSupport,Sensors,	Cockpit,	-Empty-,	Sensors,	LifeSupport
+Left Leg:		Hip,		UpperLeg,	LowerLeg,	Foot,		-Empty-,	-Empty-
+Right Leg:		Hip,		UpperLeg,	LowerLeg,	Foot,		-Empty-,	-Empty-
+
+

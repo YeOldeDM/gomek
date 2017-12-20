@@ -1,0 +1,9 @@
+TechBase:Name:Tags:Damage:Cluster:MinRange:ShortRange:MedRange:LongRange:AmmoCount:ToHitMod:Mass:Slots:BV:Cost:IntroDate:ExtinctDate:ReIntroDate
+:::::::::::::::::
+:# INNER SPHERE EQUIPMENT::::::::::::::::
+:::::::::::::::::
+:Auto-Rifle:B:0.52:2:0:1:2:3:50:0:::::::
+:Laser Rifle:E:0.28:5:0:2:4:6:16:0:::::::
+:LRM Launcher:M, H:0.19:5:1:3:6:9:4:0:::::::
+:SRM Launcher:M, H:0.63:2:0:2:4:5:8:0:::::::
+:Portable Machine Gun:B, H, AI:0.65:4:0:1:2:3:15:0:::::::

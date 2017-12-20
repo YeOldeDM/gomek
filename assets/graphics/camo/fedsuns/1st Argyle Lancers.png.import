@@ -1,0 +1,29 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path.s3tc="res://.import/1st Argyle Lancers.png-cd0d757c5ecf6ff7039b73a3f2ba2a47.s3tc.stex"
+path.etc2="res://.import/1st Argyle Lancers.png-cd0d757c5ecf6ff7039b73a3f2ba2a47.etc2.stex"
+
+[deps]
+
+source_md5="b9567ee1f08311334a1478a4d5a3e19f"
+
+[params]
+
+compress/mode=2
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=true
+flags/filter=true
+flags/mipmaps=true
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=false
+svg/scale=1.0

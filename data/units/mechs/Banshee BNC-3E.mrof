@@ -1,0 +1,55 @@
+Version:1.0
+
+
+Chassis:Banshee
+Model:BNC-3E
+ 
+Config:Biped 
+TechBase:Inner Sphere 
+Year:2475  
+
+Custom BV:1422
+Custom Cost:9530852
+
+Mass:90
+Walk MP: 4 
+Jump MP: 0
+Engine:Standard 
+Gyro:Standard
+Cockpit:Standard
+Structure:Standard 
+Myomer:Standard 
+Heat Sinks:16 Single
+Armor:15.0 Standard
+
+Armor Points:
+LA:21
+RA:21
+LT:30
+RT:30
+CT:40
+HD:9
+LL:26
+RL:26
+RTR:10
+LTR:17
+CTR:10
+
+
+Equipment:
+0:Weapon:Autocannon/5:LT
+1:Weapon:PPC:RT
+2:Weapon:Small Laser:HD
+3:Ammo:Autocannon/5:LT
+
+Critical Slots:
+Left Arm:		Shoulder,	UpperArm,	LowerArm,	Hand,		-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-
+Right Arm:		Shoulder,	UpperArm,	LowerArm,	Hand,		-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-
+Left Torso:		@0,			@0,			@0,			@0,			@3,			-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-
+Right Torso:	@1,			@1,			@1,			-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-,	-Empty-
+Center Torso:	Engine,		Engine,		Engine,		Gyro,		Gyro,		Gyro,		Gyro,		Engine,		Engine,		Engine,		-Empty-,	-Empty-
+Head:			LifeSupport,Sensors,	Cockpit,	@2,			Sensors,	LifeSupport
+Left Leg:		Hip,		UpperLeg,	LowerLeg,	Foot,		-Empty-,	-Empty-
+Right Leg:		Hip,		UpperLeg,	LowerLeg,	Foot,		HeatSink,	-Empty-
+
+

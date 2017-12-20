@@ -1,0 +1,2028 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://battle/BattleSetup/BattleSetup.gd" type="Script" id=1]
+[ext_resource path="res://battle/BattleSetup/Units.gd" type="Script" id=2]
+[ext_resource path="res://battle/BattleSetup/TeamSetup.gd" type="Script" id=3]
+[ext_resource path="res://battle/BattleSetup/UnitList.gd" type="Script" id=4]
+[ext_resource path="res://battle/BattleSetup/Board.gd" type="Script" id=5]
+[ext_resource path="res://tilesets/PreviewTiles.tres" type="TileSet" id=6]
+[ext_resource path="res://battle/BattleSetup/AddUnitWindow.gd" type="Script" id=7]
+[ext_resource path="res://assets/fonts/F25_Bank_Printer_Bold.ttf" type="DynamicFontData" id=8]
+[ext_resource path="res://assets/fonts/F25_Bank_Printer.ttf" type="DynamicFontData" id=9]
+[ext_resource path="res://battle/BattleSetup/AddTeamWindow.gd" type="Script" id=10]
+[ext_resource path="res://battle/BattleSetup/EditTeamWindow.gd" type="Script" id=11]
+
+[sub_resource type="DynamicFont" id=1]
+
+size = 14
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 8 )
+
+[sub_resource type="DynamicFont" id=2]
+
+size = 10
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 9 )
+
+[node name="BattleSetup" type="Control"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 8.0
+margin_top = 8.0
+margin_right = -8.0
+margin_bottom = -8.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+script = ExtResource( 1 )
+
+[node name="Box" type="VBoxContainer" parent="."]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 0
+
+[node name="Top" type="HBoxContainer" parent="Box"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1904.0
+margin_bottom = 20.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 0
+
+[node name="Button" type="Button" parent="Box/Top"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 64.0
+margin_bottom = 20.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Go Back"
+flat = false
+
+[node name="Button2" type="Button" parent="Box/Top"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 68.0
+margin_right = 173.0
+margin_bottom = 20.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Game Options"
+flat = false
+
+[node name="Main" type="TabContainer" parent="Box"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 24.0
+margin_right = 1904.0
+margin_bottom = 940.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+tab_align = 0
+tabs_visible = true
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Units" type="VBoxContainer" parent="Box/Main"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 0
+script = ExtResource( 2 )
+_sections_unfolded = [ "Margin", "Size Flags" ]
+
+[node name="Box" type="HBoxContainer" parent="Box/Main/Units"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1896.0
+margin_bottom = 880.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 0
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Left" type="PanelContainer" parent="Box/Main/Units/Box"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 630.0
+margin_bottom = 880.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Box" type="VBoxContainer" parent="Box/Main/Units/Box/Left"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 623.0
+margin_bottom = 873.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 0
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="UnitSetup" type="PanelContainer" parent="Box/Main/Units/Box/Left/Box"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 616.0
+margin_bottom = 171.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Box" type="VBoxContainer" parent="Box/Main/Units/Box/Left/Box/UnitSetup"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 609.0
+margin_bottom = 164.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 0
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="AddUnit" type="Button" parent="Box/Main/Units/Box/Left/Box/UnitSetup/Box"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 602.0
+margin_bottom = 20.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Add Unit..."
+flat = false
+
+[node name="RemoveUnit" type="Button" parent="Box/Main/Units/Box/Left/Box/UnitSetup/Box"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 24.0
+margin_right = 602.0
+margin_bottom = 44.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Remove Unit"
+flat = false
+
+[node name="ClearUnits" type="Button" parent="Box/Main/Units/Box/Left/Box/UnitSetup/Box"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 48.0
+margin_right = 602.0
+margin_bottom = 68.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Clear Units.."
+flat = false
+
+[node name="TeamSetup" type="PanelContainer" parent="Box/Main/Units/Box/Left/Box"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 175.0
+margin_right = 616.0
+margin_bottom = 346.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource( 3 )
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Box" type="HBoxContainer" parent="Box/Main/Units/Box/Left/Box/TeamSetup"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 609.0
+margin_bottom = 164.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 0
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Actions" type="VBoxContainer" parent="Box/Main/Units/Box/Left/Box/TeamSetup/Box"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 602.0
+margin_bottom = 157.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 1
+alignment = 0
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Name" type="Label" parent="Box/Main/Units/Box/Left/Box/TeamSetup/Box/Actions"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 602.0
+margin_bottom = 76.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="AddTeam" type="Button" parent="Box/Main/Units/Box/Left/Box/TeamSetup/Box/Actions"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 80.0
+margin_right = 602.0
+margin_bottom = 157.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "New Team"
+flat = false
+
+[node name="RemoveTeam" type="Button" parent="Box/Main/Units/Box/Left/Box/TeamSetup/Box/Actions"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 89.0
+margin_right = 602.0
+margin_bottom = 109.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Remove Team"
+flat = false
+
+[node name="Edit Team" type="Button" parent="Box/Main/Units/Box/Left/Box/TeamSetup/Box/Actions"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 113.0
+margin_right = 602.0
+margin_bottom = 133.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Edit Team"
+flat = false
+
+[node name="ClearTeamUnits" type="Button" parent="Box/Main/Units/Box/Left/Box/TeamSetup/Box/Actions"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 137.0
+margin_right = 602.0
+margin_bottom = 157.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Clear Units on Team"
+flat = false
+
+[node name="Camo" type="VBoxContainer" parent="Box/Main/Units/Box/Left/Box/TeamSetup/Box"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 303.0
+margin_right = 602.0
+margin_bottom = 157.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 1
+alignment = 0
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Label" type="Label" parent="Box/Main/Units/Box/Left/Box/TeamSetup/Box/Camo"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 299.0
+margin_bottom = 14.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Team Color"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Color" type="ColorPickerButton" parent="Box/Main/Units/Box/Left/Box/TeamSetup/Box/Camo"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 18.0
+margin_right = 299.0
+margin_bottom = 157.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = false
+color = Color( 1, 1, 1, 1 )
+edit_alpha = false
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="TeamList" type="Tree" parent="Box/Main/Units/Box/Left/Box"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 350.0
+margin_right = 616.0
+margin_bottom = 866.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 3.0
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Right" type="PanelContainer" parent="Box/Main/Units/Box"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 634.0
+margin_right = 1896.0
+margin_bottom = 880.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 2.0
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Box" type="VBoxContainer" parent="Box/Main/Units/Box/Right"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 1255.0
+margin_bottom = 873.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 0
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Sort" type="HBoxContainer" parent="Box/Main/Units/Box/Right/Box"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1248.0
+margin_bottom = 20.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 0
+
+[node name="Unit" type="Button" parent="Box/Main/Units/Box/Right/Box/Sort"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 309.0
+margin_bottom = 20.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Unit"
+flat = false
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Pilot" type="Button" parent="Box/Main/Units/Box/Right/Box/Sort"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 313.0
+margin_right = 622.0
+margin_bottom = 20.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Pilot"
+flat = false
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Team" type="Button" parent="Box/Main/Units/Box/Right/Box/Sort"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 626.0
+margin_right = 935.0
+margin_bottom = 20.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Team"
+flat = false
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="BV" type="Button" parent="Box/Main/Units/Box/Right/Box/Sort"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 939.0
+margin_right = 1248.0
+margin_bottom = 20.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Battle Value"
+flat = false
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="UnitList" type="ScrollContainer" parent="Box/Main/Units/Box/Right/Box"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 24.0
+margin_right = 1248.0
+margin_bottom = 866.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+scroll_horizontal = false
+scroll_vertical = true
+script = ExtResource( 4 )
+_sections_unfolded = [ "Scroll", "Size Flags" ]
+
+[node name="Box" type="VBoxContainer" parent="Box/Main/Units/Box/Right/Box/UnitList"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1248.0
+margin_bottom = 842.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 0
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Board" type="VBoxContainer" parent="Box/Main"]
+
+editor/display_folded = true
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 0
+script = ExtResource( 5 )
+_sections_unfolded = [ "Margin", "Size Flags" ]
+
+[node name="Map" type="HBoxContainer" parent="Box/Main/Board"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1912.0
+margin_bottom = 996.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 0
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="MapList" type="Tree" parent="Box/Main/Board/Map"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 954.0
+margin_bottom = 996.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Preview" type="VBoxContainer" parent="Box/Main/Board/Map"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 958.0
+margin_right = 1912.0
+margin_bottom = 996.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 1
+alignment = 0
+_sections_unfolded = [ "Rect", "Size Flags" ]
+
+[node name="PreviewMap" type="TileMap" parent="Box/Main/Board/Map/Preview"]
+
+scale = Vector2( 2, 2 )
+mode = 0
+tile_set = ExtResource( 6 )
+cell_size = Vector2( 8, 10 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 1
+cell_tile_origin = 0
+cell_y_sort = true
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( -65534, 2, 65537, 2, 2, 65537, 3, 2, 65537, 4, 2, 65537, 65537, 2, 65537, 65538, 2, 65537, 65539, 2, 65537, 65540, 2, 65537, 131074, 3, 65537, 131075, 3, 65537, 131076, 3, 65537, 196609, 4, 65537, 196610, 3, 65537, 196611, 3, 65537, 196612, 3, 65537, 262146, 4, 65537, 262147, 4, 65537, 262148, 4, 65537, 327681, 4, 65537, 327682, 4, 65537, 327683, 4, 65537, 327684, 3, 65537, 393218, 5, 65537, 393219, 5, 65537, 393220, 5, 65537, 458753, 5, 65537, 458754, 5, 65537, 458755, 6, 65537, 458756, 5, 65537, 524289, 5, 65537, 524290, 5, 65537, 524291, 6, 65537, 524292, 11, 65537, 589825, 13, 65537, 589826, 6, 65537, 589827, 11, 65537, 589828, 5, 65537, 655361, 5, 65537, 655362, 6, 65537, 655363, 5, 65537, 655364, 11, 65537, 720897, 5, 65537, 720898, 11, 65537, 720899, 5, 65537, 786433, 5, 65537, 786434, 5, 65537, 786435, 12, 65537, 786436, 5, 65537, 851969, 5, 65537, 851970, 12, 65537, 851971, 5, 65537, 917506, 5, 65537, 917507, 5, 65537, 917508, 5, 65537, 1048580, 13, 65537 )
+_sections_unfolded = [ "Cell" ]
+
+[node name="Settings" type="VBoxContainer" parent="Box/Main"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 0
+_sections_unfolded = [ "Margin", "Size Flags" ]
+
+[node name="Bottom" type="HBoxContainer" parent="Box"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 944.0
+margin_right = 1904.0
+margin_bottom = 1064.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 2
+
+[node name="Done" type="Button" parent="Box/Bottom"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1904.0
+margin_bottom = 120.0
+rect_min_size = Vector2( 0, 120 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "DONE!"
+flat = false
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="AddUnitWindow" type="WindowDialog" parent="."]
+
+editor/display_folded = true
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 296.0
+margin_top = 178.0
+margin_right = 1580.0
+margin_bottom = 815.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+popup_exclusive = true
+window_title = "Select Unit(s)..."
+resizable = true
+script = ExtResource( 7 )
+_sections_unfolded = [ "Popup" ]
+
+[node name="Box" type="VBoxContainer" parent="AddUnitWindow"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 0
+
+[node name="Contents" type="HBoxContainer" parent="AddUnitWindow/Box"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1284.0
+margin_bottom = 613.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 0
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Main" type="PanelContainer" parent="AddUnitWindow/Box/Contents"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 930.0
+margin_bottom = 613.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Box" type="VBoxContainer" parent="AddUnitWindow/Box/Contents/Main"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 923.0
+margin_bottom = 606.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 16
+alignment = 0
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Top" type="HBoxContainer" parent="AddUnitWindow/Box/Contents/Main/Box"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 916.0
+margin_bottom = 136.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 1
+alignment = 0
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Box" type="VBoxContainer" parent="AddUnitWindow/Box/Contents/Main/Box/Top"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 608.0
+margin_bottom = 136.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 2.0
+alignment = 1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="TypeFilter" type="HBoxContainer" parent="AddUnitWindow/Box/Contents/Main/Box/Top/Box"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 608.0
+margin_bottom = 20.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 0
+
+[node name="Label" type="Label" parent="AddUnitWindow/Box/Contents/Main/Box/Top/Box/TypeFilter"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 3.0
+margin_right = 151.0
+margin_bottom = 17.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+text = "Unit Type"
+align = 2
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="OptionButton" type="OptionButton" parent="AddUnitWindow/Box/Contents/Main/Box/Top/Box/TypeFilter"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 155.0
+margin_right = 608.0
+margin_bottom = 20.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+size_flags_stretch_ratio = 3.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = false
+align = 0
+selected = -1
+items = [  ]
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="WeightClassFilter" type="HBoxContainer" parent="AddUnitWindow/Box/Contents/Main/Box/Top/Box"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 24.0
+margin_right = 608.0
+margin_bottom = 44.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 0
+
+[node name="Label" type="Label" parent="AddUnitWindow/Box/Contents/Main/Box/Top/Box/WeightClassFilter"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 3.0
+margin_right = 151.0
+margin_bottom = 17.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+text = "Weight Class"
+align = 2
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="OptionButton" type="OptionButton" parent="AddUnitWindow/Box/Contents/Main/Box/Top/Box/WeightClassFilter"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 155.0
+margin_right = 608.0
+margin_bottom = 20.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+size_flags_stretch_ratio = 3.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = false
+align = 0
+selected = -1
+items = [  ]
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="NameFilter" type="HBoxContainer" parent="AddUnitWindow/Box/Contents/Main/Box/Top/Box"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 48.0
+margin_right = 608.0
+margin_bottom = 72.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 0
+
+[node name="Label" type="Label" parent="AddUnitWindow/Box/Contents/Main/Box/Top/Box/NameFilter"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 5.0
+margin_right = 151.0
+margin_bottom = 19.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+text = "Filter"
+align = 2
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="OptionButton" type="LineEdit" parent="AddUnitWindow/Box/Contents/Main/Box/Top/Box/NameFilter"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 155.0
+margin_right = 608.0
+margin_bottom = 24.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+size_flags_stretch_ratio = 3.0
+focus_mode = 2
+placeholder_alpha = 0.6
+caret_blink = false
+caret_blink_speed = 0.65
+context_menu_enabled = true
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="HSeparator" type="HSeparator" parent="AddUnitWindow/Box/Contents/Main/Box/Top/Box"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 76.0
+margin_right = 608.0
+margin_bottom = 80.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+
+[node name="PilotName" type="HBoxContainer" parent="AddUnitWindow/Box/Contents/Main/Box/Top/Box"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 84.0
+margin_right = 608.0
+margin_bottom = 108.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 0
+
+[node name="PilotName" type="Label" parent="AddUnitWindow/Box/Contents/Main/Box/Top/Box/PilotName"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 5.0
+margin_right = 123.0
+margin_bottom = 19.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+text = "Pilot Name"
+align = 2
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="PilotNameEdit" type="LineEdit" parent="AddUnitWindow/Box/Contents/Main/Box/Top/Box/PilotName"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 127.0
+margin_right = 497.0
+margin_bottom = 24.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+size_flags_stretch_ratio = 3.0
+text = "Max Worrior"
+focus_mode = 2
+placeholder_text = "Enter Pilot Name Here!"
+placeholder_alpha = 0.6
+caret_blink = false
+caret_blink_speed = 0.65
+context_menu_enabled = true
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="RandomName" type="Button" parent="AddUnitWindow/Box/Contents/Main/Box/Top/Box/PilotName"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 501.0
+margin_right = 607.0
+margin_bottom = 24.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Random Name"
+flat = false
+
+[node name="PilotSkill" type="HBoxContainer" parent="AddUnitWindow/Box/Contents/Main/Box/Top/Box"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 112.0
+margin_right = 608.0
+margin_bottom = 136.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 0
+
+[node name="Gunnery" type="Label" parent="AddUnitWindow/Box/Contents/Main/Box/Top/Box/PilotSkill"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 5.0
+margin_right = 171.0
+margin_bottom = 19.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+text = "Gunnery"
+align = 2
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="GunneryEdit" type="SpinBox" parent="AddUnitWindow/Box/Contents/Main/Box/Top/Box/PilotSkill"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 175.0
+margin_right = 249.0
+margin_bottom = 24.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+size_flags_stretch_ratio = 3.0
+min_value = 0.0
+max_value = 10.0
+step = 1.0
+page = 0.0
+value = 4.0
+exp_edit = false
+rounded = false
+editable = true
+prefix = ""
+suffix = ""
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Piloting" type="Label" parent="AddUnitWindow/Box/Contents/Main/Box/Top/Box/PilotSkill"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 253.0
+margin_top = 5.0
+margin_right = 424.0
+margin_bottom = 19.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+text = "Piloting"
+align = 2
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="PilotingEdit" type="SpinBox" parent="AddUnitWindow/Box/Contents/Main/Box/Top/Box/PilotSkill"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 428.0
+margin_right = 502.0
+margin_bottom = 24.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+size_flags_stretch_ratio = 3.0
+min_value = 0.0
+max_value = 10.0
+step = 1.0
+page = 0.0
+value = 5.0
+exp_edit = false
+rounded = false
+editable = true
+prefix = ""
+suffix = ""
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="RandomSkills" type="Button" parent="AddUnitWindow/Box/Contents/Main/Box/Top/Box/PilotSkill"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 506.0
+margin_right = 607.0
+margin_bottom = 24.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Random Skills"
+flat = false
+
+[node name="UnitIcon" type="TextureRect" parent="AddUnitWindow/Box/Contents/Main/Box/Top"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 612.0
+margin_right = 916.0
+margin_bottom = 136.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 3
+expand = true
+stretch_mode = 4
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Tree" type="Tree" parent="AddUnitWindow/Box/Contents/Main/Box"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 152.0
+margin_right = 916.0
+margin_bottom = 599.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="UnitData" type="RichTextLabel" parent="AddUnitWindow/Box/Contents"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 934.0
+margin_right = 1284.0
+margin_bottom = 613.0
+rect_min_size = Vector2( 350, 0 )
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_fonts/bold_font = SubResource( 1 )
+custom_fonts/normal_font = SubResource( 2 )
+bbcode_enabled = true
+bbcode_text = ""
+visible_characters = -1
+percent_visible = 1.0
+override_selected_font_color = false
+
+[node name="Options" type="HBoxContainer" parent="AddUnitWindow/Box"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 617.0
+margin_right = 1284.0
+margin_bottom = 637.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 1
+
+[node name="Select" type="Button" parent="AddUnitWindow/Box/Options"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 475.0
+margin_right = 526.0
+margin_bottom = 20.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Select"
+flat = false
+
+[node name="SelectClose" type="Button" parent="AddUnitWindow/Box/Options"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 530.0
+margin_right = 634.0
+margin_bottom = 20.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Select & Close"
+flat = false
+
+[node name="Close" type="Button" parent="AddUnitWindow/Box/Options"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 638.0
+margin_right = 685.0
+margin_bottom = 20.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Close"
+flat = false
+
+[node name="Team" type="OptionButton" parent="AddUnitWindow/Box/Options"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 689.0
+margin_right = 809.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 120, 0 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Item 0"
+flat = false
+align = 0
+selected = 0
+items = [ "Item 0", null, false, -1, null, "Item 1", null, false, -1, null, "Item 2", null, false, -1, null ]
+_sections_unfolded = [ "Rect" ]
+
+[node name="AddTeamWindow" type="WindowDialog" parent="."]
+
+editor/display_folded = true
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 662.0
+margin_top = 328.0
+margin_right = 1270.0
+margin_bottom = 508.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+popup_exclusive = false
+window_title = "Add New Team..."
+resizable = true
+script = ExtResource( 10 )
+
+[node name="Box" type="VBoxContainer" parent="AddTeamWindow"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 32.0
+margin_right = -32.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 1
+_sections_unfolded = [ "Margin" ]
+
+[node name="Fields" type="GridContainer" parent="AddTeamWindow/Box"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 42.0
+margin_right = 544.0
+margin_bottom = 114.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 1
+columns = 2
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Name" type="Label" parent="AddTeamWindow/Box/Fields"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 5.0
+margin_right = 115.0
+margin_bottom = 19.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 1
+size_flags_vertical = 6
+text = "Team Name"
+align = 2
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="NameEdit" type="LineEdit" parent="AddTeamWindow/Box/Fields"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 119.0
+margin_right = 544.0
+margin_bottom = 24.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+focus_mode = 2
+placeholder_alpha = 0.6
+caret_blink = false
+caret_blink_speed = 0.65
+context_menu_enabled = true
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Color" type="Label" parent="AddTeamWindow/Box/Fields"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 31.0
+margin_right = 115.0
+margin_bottom = 45.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Team Color"
+align = 2
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="ColorEdit" type="ColorPickerButton" parent="AddTeamWindow/Box/Fields"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 119.0
+margin_top = 28.0
+margin_right = 544.0
+margin_bottom = 48.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = false
+color = Color( 1, 1, 1, 1 )
+edit_alpha = true
+
+[node name="Start" type="Label" parent="AddTeamWindow/Box/Fields"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 55.0
+margin_right = 115.0
+margin_bottom = 69.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 1
+size_flags_vertical = 6
+text = "Deployment Zone"
+align = 2
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="StartEdit" type="OptionButton" parent="AddTeamWindow/Box/Fields"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 119.0
+margin_top = 52.0
+margin_right = 544.0
+margin_bottom = 72.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Any"
+flat = false
+align = 0
+selected = 0
+items = [ "Any", null, false, 0, null ]
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Actions" type="HBoxContainer" parent="AddTeamWindow/Box"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 118.0
+margin_right = 544.0
+margin_bottom = 138.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 1
+
+[node name="NewTeamOK" type="Button" parent="AddTeamWindow/Box/Actions"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 270.0
+margin_bottom = 20.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Add"
+flat = false
+
+[node name="NewTeamCancel" type="Button" parent="AddTeamWindow/Box/Actions"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 274.0
+margin_right = 544.0
+margin_bottom = 20.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Cancel"
+flat = false
+
+[node name="EditTeamWindow" type="WindowDialog" parent="."]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 585.0
+margin_top = 294.0
+margin_right = 908.0
+margin_bottom = 567.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+popup_exclusive = false
+window_title = "Edit Team ..."
+resizable = true
+script = ExtResource( 11 )
+
+[node name="Box" type="VBoxContainer" parent="EditTeamWindow"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 0
+
+[node name="Contents" type="VBoxContainer" parent="EditTeamWindow/Box"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 323.0
+margin_bottom = 249.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 1
+
+[node name="NameLabel" type="Label" parent="EditTeamWindow/Box/Contents"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 66.0
+margin_right = 323.0
+margin_bottom = 80.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Team Name"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="NameEdit" type="LineEdit" parent="EditTeamWindow/Box/Contents"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 33.0
+margin_top = 84.0
+margin_right = 289.0
+margin_bottom = 108.0
+rect_min_size = Vector2( 256, 0 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 4
+size_flags_vertical = 1
+size_flags_stretch_ratio = 0.5
+expand_to_text_length = true
+focus_mode = 2
+placeholder_text = "CurrentTeamName"
+placeholder_alpha = 0.6
+caret_blink = false
+caret_blink_speed = 0.65
+context_menu_enabled = true
+
+[node name="ColorEdit" type="ColorPickerButton" parent="EditTeamWindow/Box/Contents"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 119.0
+margin_top = 112.0
+margin_right = 203.0
+margin_bottom = 132.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 4
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Team Color"
+flat = false
+color = Color( 1, 1, 1, 1 )
+edit_alpha = false
+
+[node name="HSeparator" type="HSeparator" parent="EditTeamWindow/Box/Contents"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 136.0
+margin_right = 323.0
+margin_bottom = 140.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+
+[node name="ZoneLabel" type="Label" parent="EditTeamWindow/Box/Contents"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 144.0
+margin_right = 323.0
+margin_bottom = 158.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Deployment Zone"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="ZoneEdit" type="OptionButton" parent="EditTeamWindow/Box/Contents"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 129.0
+margin_top = 162.0
+margin_right = 194.0
+margin_bottom = 182.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 4
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "ANY"
+flat = false
+align = 0
+selected = 0
+items = [ "ANY", null, false, 0, null, "North", null, false, 1, null, "East", null, false, 2, null, "South", null, false, 3, null, "West", null, false, 4, null ]
+
+[node name="Apply" type="Button" parent="EditTeamWindow/Box"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 253.0
+margin_right = 323.0
+margin_bottom = 273.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 3
+size_flags_vertical = 0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Apply"
+flat = false
+
+[connection signal="pressed" from="Box/Main/Units/Box/Left/Box/UnitSetup/Box/AddUnit" to="Box/Main/Units" method="_on_AddUnit_pressed"]
+
+[connection signal="pressed" from="Box/Main/Units/Box/Left/Box/UnitSetup/Box/RemoveUnit" to="Box/Main/Units" method="_on_RemoveUnit_pressed"]
+
+[connection signal="pressed" from="Box/Main/Units/Box/Left/Box/UnitSetup/Box/ClearUnits" to="Box/Main/Units" method="_on_ClearUnits_pressed"]
+
+[connection signal="pressed" from="Box/Main/Units/Box/Left/Box/TeamSetup/Box/Actions/AddTeam" to="Box/Main/Units/Box/Left/Box/TeamSetup" method="_on_AddTeam_pressed"]
+
+[connection signal="pressed" from="Box/Main/Units/Box/Left/Box/TeamSetup/Box/Actions/RemoveTeam" to="Box/Main/Units/Box/Left/Box/TeamSetup" method="_on_RemoveTeam_pressed"]
+
+[connection signal="pressed" from="Box/Main/Units/Box/Left/Box/TeamSetup/Box/Actions/ClearTeamUnits" to="Box/Main/Units" method="_on_ClearTeamUnits_pressed"]
+
+[connection signal="color_changed" from="Box/Main/Units/Box/Left/Box/TeamSetup/Box/Camo/Color" to="Box/Main/Units" method="_on_Color_color_changed"]
+
+[connection signal="item_rmb_selected" from="Box/Main/Units/Box/Left/Box/TeamList" to="Box/Main/Units/Box/Left/Box/TeamSetup" method="_on_TeamList_item_rmb_selected"]
+
+[connection signal="item_selected" from="Box/Main/Units/Box/Left/Box/TeamList" to="Box/Main/Units/Box/Left/Box/TeamSetup" method="_on_TeamList_item_selected"]
+
+[connection signal="item_selected" from="Box/Main/Board/Map/MapList" to="Box/Main/Board" method="_on_MapList_item_selected"]
+
+[connection signal="about_to_show" from="AddUnitWindow" to="AddUnitWindow" method="_on_AddUnitWindow_about_to_show"]
+
+[connection signal="column_title_pressed" from="AddUnitWindow/Box/Contents/Main/Box/Tree" to="AddUnitWindow" method="_on_Tree_column_title_pressed"]
+
+[connection signal="item_selected" from="AddUnitWindow/Box/Contents/Main/Box/Tree" to="AddUnitWindow" method="_on_Tree_item_selected"]
+
+[connection signal="pressed" from="AddUnitWindow/Box/Options/Select" to="AddUnitWindow" method="_on_Select_pressed"]
+
+[connection signal="pressed" from="AddUnitWindow/Box/Options/SelectClose" to="AddUnitWindow" method="_on_SelectClose_pressed"]
+
+[connection signal="pressed" from="AddUnitWindow/Box/Options/Close" to="AddUnitWindow" method="_on_Close_pressed"]
+
+[connection signal="item_selected" from="AddUnitWindow/Box/Options/Team" to="AddUnitWindow" method="_on_Team_item_selected"]
+
+[connection signal="pressed" from="AddTeamWindow/Box/Actions/NewTeamOK" to="AddTeamWindow" method="_on_NewTeamOK_pressed"]
+
+[connection signal="pressed" from="AddTeamWindow/Box/Actions/NewTeamCancel" to="AddTeamWindow" method="_on_NewTeamCancel_pressed"]
+
+[connection signal="pressed" from="EditTeamWindow/Box/Apply" to="EditTeamWindow" method="_on_Apply_pressed"]
+
+

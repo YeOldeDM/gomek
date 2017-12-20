@@ -1,0 +1,60 @@
+Version:1.0
+
+
+Chassis:Battleaxe
+Model:BKX-7NC
+ 
+Config:Biped 
+TechBase:Inner Sphere 
+Year:2480
+
+Custom BV:1252
+Custom Cost:6105833
+
+Mass:70
+Walk MP: 4
+Jump MP: 0
+Engine:Standard 
+Gyro:Standard
+Cockpit:Standard
+Structure:Standard 
+Myomer:Standard 
+Heat Sinks:15 Single
+Armor:9.0 Standard
+
+Armor Points:
+LA:14
+RA:14
+LT:18
+RT:18
+CT:20
+HD:9
+LL:16
+RL:16
+RTR:6
+LTR:6
+CTR:7
+
+
+Equipment:
+0:Weapon:PPC:LA
+1:Weapon:PPC:RA
+2:Weapon:LRM 5:LT
+3:Weapon:LRM 5:LT
+4:Weapon:SRM 6:RT
+5:Weapon:LRM 5:RT
+6:Weapon:LRM 5:RT
+7:Ammo:LRM 5:LT
+8:Ammo:SRM 6:RT
+
+Critical Slots:
+Left Arm:Shoulder,UpperArm,LowerArm,HeatSink,HeatSink,@0,@0,@0,-Empty-,-Empty-,-Empty-,-Empty-
+Right Arm:Shoulder,UpperArm,LowerArm,HeatSink,HeatSink,@1,@1,@1,-Empty-,-Empty-,-Empty-,-Empty-
+Left Torso:@2,@3,@7,-Empty-,-Empty-,-Empty-,-Empty-,-Empty-,-Empty-,-Empty-,-Empty-,-Empty-
+Right Torso:@4,@4,@5,@6,@8,-Empty-,-Empty-,-Empty-,-Empty-,-Empty-,-Empty-,-Empty-
+Center Torso:Engine,Engine,Engine,Gyro,Gyro,Gyro,Gyro,Engine,Engine,Engine,-Empty-,-Empty-
+Head:LifeSupport,Sensors,Cockpit,-Empty-,Sensors,LifeSupport
+Left Leg:Hip,UpperLeg,LowerLeg,Foot,-Empty-,-Empty-
+Right Leg:Hip,UpperLeg,LowerLeg,Foot,-Empty-,-Empty-
+
+
